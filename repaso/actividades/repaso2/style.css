@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 #container{
-    height: 660px;
     padding: 5px;
     position: absolute;
+    height: 660px;
     width: 1284px;
     left: 10px;
     border: 1px solid red;
@@ -15,11 +16,16 @@
 .boxes {
     background: #7ae3e7;
     height: 200px;
-    position: absolute;
     width: 200px;
+    position: absolute;
 }
 #box_tl {
     left: 0px;
+    top: 0px;
+}
+
+#box_tr {
+    right: 0px;
     top: 0px;
 }
 
@@ -28,20 +34,14 @@
     top:  230px;
 }
 
-
-#box_tr {
-    right: 0px;
-    top: 0px;
-}
-
 #box_bl {
-    bottom: 0px;
     left: 0px;
+    bottom: 0px;
 }
 
 #box_br {
-    bottom: 0px;
     right: 0px;
+    bottom: 0px;
 }
 
 
