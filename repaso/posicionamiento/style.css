@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+main {
+    height: 1400px;
+    padding-left: 20px ;
+}
+
+h2, h3 {
+    margin: 20px 0;
+}
+
+.box {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #7ae3e7;
+    text-align: center;
+}
+
+/*display*/
+.block-boxes .box {
+    height: 50px;
+    width: 50px;
+    display: block;
+}
+
+.inlines-boxes .box {
+    /*height y width que no esta tomando*/
+    height: 50px;
+    width: 50px;
+    display: inline;
+    padding: 3px;
+}
+
+.inline-block-boxes .box{
+    height: 50px;
+    width: 50px;
+}
+
+/*float*/
+.box-father {
+    background: #257db8;
+    width: 700px;
+    /*overflow*/
+    overflow: hidden;
+}
+
+.float-box {
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    font-size: 38px;
+    height: 200px;
+    background: #7ae3e7;
+    margin: 20px;
+}
+
+.first-box {
+    float: left;
+}
+
+.second-box {
+    float: right;
+}
+
+/*position*/
+/*relative, absolute exactamente igual bottom y left, cambio en base a referencia*/
+.absolute {
+    position: absolute;
+    bottom: 50px;
+    left: 196px;
+}
+
+.relative {
+    position: relative;
+    bottom: 50px;
+    left: 196px;
+    background: red;
+}
+
+.sticky{
+    position: sticky;
+    top: 0px;
+    left: 500px;
+}
+
+.fixed {
+    position: fixed;
+    top: 400px;
+    right: 0px;
+}
+
+.box-container {
+    height: 100%;
+    margin-top: 80px;
+}

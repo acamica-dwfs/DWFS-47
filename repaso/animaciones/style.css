@@ -1,0 +1,220 @@
+/*estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    padding: 20px 100px;
+}
+h1 {
+    margin: 30px 0;
+}
+h2 {
+    margin: 60px 0 10px 0;
+}
+.box {
+    width: 100px;
+    margin: 20px 20px 20px 0;
+    height: 100px;
+    display: inline-block;
+    padding-top: 20px;
+    text-align: center;
+    background: #7decec;
+}
+/*gradientes*/
+/*pseudo-clase first-child*/
+.gradients .box-ctn div:first-child {
+    background-image: linear-gradient( 90deg,  rgba(104,183,249,1) 31.3%, rgba(176,248,200,1) 100.2% );
+}
+.gradients .box-ctn .linear-grad {
+    background-image: linear-gradient( 0deg,  rgba(255,7,7,1) -4.5%, rgba(255,255,5,1) 98.8% );
+}
+/*pseudo-clase last-child*/
+.gradients .box-ctn div:last-child {
+    background-image: radial-gradient( circle at 50% 50%,  rgba(0,226,192,1) 0.5%, rgba(149,0,248,1) 100% );
+}
+/*pseudo-elementos before y after*/
+.pseudo-elementos .text {
+    width: 500px;
+}
+.pseudo-elementos .text::before {
+    font-weight: bold;
+    color: red;
+    content: '10/02/2020 (fecha colocada al inicio del texto con before) ';
+}
+.pseudo-elementos .text::after {
+    font-weight: bold;
+    color: red;
+    content: ' by John Doe (firma colocada al final del texto con after) ';
+}
+.pseudo-elementos .hover {
+    padding: 10px 20px;
+    background: #7decec;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.pseudo-elementos .hover:hover {
+    outline: 0;
+    background: #4ee2e2;
+    border: 2px dotted #000;
+}
+/*z-index*/
+.z-index h3 {
+    padding: 50px 0 20px 0;
+}
+.z-index .second-box {
+    background-color: red;
+    transform: translate(-80px, 40px);
+}
+
+.z-index .third-box {
+    position: relative;
+    z-index: 1;
+}
+.z-index .fourth-box {
+    background-color: red;
+    transform: translate(-80px, 40px);
+}
+
+.z-index .six-box {
+    background-color: red;
+    transform: translate(-80px, 40px);
+    position: relative;
+    z-index: -1;
+}
+/*transform*/
+.transform h3 {
+    padding: 50px 0;
+}
+.transform .translate-x {
+    transform: translateX(50px);
+}
+.transform .translate-y {
+    transform: translateY(50px);
+}
+.transform .translate {
+    transform: translate(50px, 50px);
+}
+.transform .translate2 {
+    transform: translate(-50px, -50px);
+}
+.transform .scale {
+    transform: scale(2,2);
+}
+.transform .scale2 {
+    transform: scale(0.5,0.5);
+}
+.transform .rotate {
+    transform: rotate(45deg);
+}
+.transform .skew {
+    transform: skew(20deg, 0);
+}
+.transform .skew2 {
+    transform: skew(0, 20deg);
+}
+.transform .skew3 {
+    transform: skew(20deg, 20deg);
+}
+
+/*animation*/
+.animation-transition h3 {
+    padding: 50px 0;
+}
+.animation-transition .box {
+    transition: all .3s ease;
+}
+.animation-transition .translate:hover {
+    transform: translate(50px, 50px);
+}
+.animation-transition .translate2:hover {
+    transform: translate(-50px, -50px);
+}
+.animation-transition .scale:hover {
+    transform: scale(2,2);
+}
+.animation-transition .scale2:hover {
+    transform: scale(0.5,0.5);
+}
+.animation-transition .rotate:hover {
+    transform: rotate(45deg);
+}
+.animation-transition .skew:hover {
+    transform: skew(20deg, 0);
+}
+.animation-transition .skew2:hover {
+    transform: skew(0, 20deg);
+}
+.animation-transition .skew3:hover {
+    transform: skew(20deg, 20deg);
+}
+
+/*curva de velocidad*/
+.animation-velocity:hover .box {
+    transform: translateX(400px);
+}
+.animation-velocity .anim-ease {
+    transition: all 1s ease;
+}
+.animation-velocity .anim-linear {
+    transition: all 1s linear;
+}
+.animation-velocity .anim-ease-in {
+    transition: all 1s ease-in;
+}
+.animation-velocity .anim-ease-out {
+    transition: all 1s ease-out;
+}
+.animation-velocity .anim-ease-in-out {
+    transition: all 1s ease-in-out;
+}
+
+/*keyframes*/
+@keyframes colors {
+    0% {background: #7decec;}
+    25% {background: #bee7e7; width: 150px;}
+    50% {background: #fff; width: 200px;}
+    75% {background: #bee7e7; width: 150px;}
+    100% {background: #7decec; width: 100px;}
+}
+
+.animation-keyframes .colors{
+    animation-name: colors;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(500px);}
+    100% {transform: translateX(0px);}
+}
+
+.animation-keyframes .movement{
+    /*lo mismo que se puso en la caja anterior pero abreviado a una linea*/
+    animation: movement 3s ease infinite;
+}
+
+.animation-keyframes .movement-color{
+    /*dos animaciones al mismo tiempo separandolas con coma*/
+    animation-name: colors, movement;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.fuentes{
+    font-family: 'Roboto', sans-serif;
+}
+.roboto-light{
+    font-weight: 400;
+}
+.roboto-medium{
+    font-weight: 500;
+}
+.roboto-bold{
+    font-weight: 700;
+}

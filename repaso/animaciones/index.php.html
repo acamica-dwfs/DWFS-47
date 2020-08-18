@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Avanzado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <h1>CSS Avanzado</h1>
+    <section class="gradients">
+        <h2>Gradientes</h2>
+        <div class="box-ctn">
+            <!--seleccionado con first-child -->
+            <div class="box">lineal</div>
+            <div class="box linear-grad">lineal</div>
+            <!--seleccionado con last-child -->
+            <div class="box">radial</div>
+        </div>
+    </section>
+    <section class="pseudo-elementos">
+        <h2>Pseudo-elementos ::before y ::after</h2>
+        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores natus officia? Alias expedita totam vel, qui eum earum temporibus numquam, libero, porro optio magnam! Ipsam fugit laborum fuga at!</p>
+        <h2>Pseudo-clase :hover</h2>
+        <button class="hover">Leer Más</button>
+    </section>
+    <section class="z-index">
+        <h2>Z-index</h2>
+        <h3>Sin z-index</h3>
+        <div class="box first-box"></div>
+        <div class="box second-box"></div>
+        <h3>Caja celeste z-index de 1</h3>
+        <div class="box third-box"></div>
+        <div class="box fourth-box"></div>
+        <h3>Caja roja z-index de -1</h3>
+        <div class="box"></div>
+        <div class="box six-box"></div>
+    </section>
+    <section class="transform">
+        <h2>Transform - efectos de transform sobre el mismo cuadrado base</h2>
+        <h3>TranslateX - transform: translateX(50px)</h3>
+        <div class="box translate-x"></div>
+        <h3>TranslateY - transform: translateY(50px)</h3>
+        <div class="box translate-y"></div>
+        <h3>Translate - transform: translate(50px, 50px)</h3>
+        <div class="box translate"></div>
+        <h3>Translate - transform: translate(-50px, -50px)</h3>
+        <div class="box translate2"></div>
+        <h3>Scale - transform: scale(2,2)</h3>
+        <div class="box scale"></div>
+        <h3>Scale - transform: scale(0.5,0.5)</h3>
+        <div class="box scale2"></div>
+        <h3>Rotate - transform: rotate(45deg)</h3>
+        <div class="box rotate"></div>
+        <h3>Skew - transform: skew(20deg, 0);</h3>
+        <div class="box skew"></div>
+        <h3>Skew - transform: skew(0, 20deg);</h3>
+        <div class="box skew2"></div>
+        <h3>Skew - transform: skew(20deg, 20deg);</h3>
+        <div class="box skew3"></div>
+    </section>
+    <section class="animation-transition">
+        <h2>Animation con transition - activadas individualmente con hover</h2>
+        <h3>Translate - transform: translate(50px, 50px)</h3>
+        <div class="box translate"></div>
+        <h3>Translate - transform: translate(-50px, -50px)</h3>
+        <div class="box translate2"></div>
+        <h3>Scale - transform: scale(2,2)</h3>
+        <div class="box scale"></div>
+        <h3>Scale - transform: scale(0.5,0.5)</h3>
+        <div class="box scale2"></div>
+        <h3>Rotate - transform: rotate(45deg)</h3>
+        <div class="box rotate"></div>
+        <h3>Skew - transform: skew(20deg, 0);</h3>
+        <div class="box skew"></div>
+        <h3>Skew - transform: skew(0, 20deg);</h3>
+        <div class="box skew2"></div>
+        <h3>Skew - transform: skew(20deg, 20deg);</h3>
+        <div class="box skew3"></div>
+    </section>
+    <section class="animation-velocity">
+        <h2>Velocidad de curva - activadas todas al mismo tiempo con hover</h2>
+        <h3>Ease</h3>
+        <div class="box anim-ease"></div>
+        <h3>Linear</h3>
+        <div class="box anim-linear"></div>
+        <h3>Ease-in</h3>
+        <div class="box anim-ease-in"></div>
+        <h3>Ease-out</h3>
+        <div class="box anim-ease-out"></div>
+        <h3>Ease-in-out</h3>
+        <div class="box anim-ease-in-out"></div>
+    </section>
+    <section class="animation-keyframes">
+        <h2>Animaciones con Keyframes</h2>
+        <div class="box colors"></div><br>
+        <div class="box movement"></div><br>
+        <div class="box movement-color"></div>
+    </section>
+    <section class="fuentes">
+        <h2>Google Fonts</h2>
+        <div class="roboto-light">Roboto light</div>
+        <div class="roboto-medium">Roboto Medium</div>
+        <div class="roboto-bold">Roboto Bold</div>
+    </section>
+
+</main>
+</body>
+</html>
