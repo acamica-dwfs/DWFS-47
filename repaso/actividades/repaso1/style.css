@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 #container{
-    height: 800px;
+    height: 660px;
     padding: 5px;
     position: absolute;
-    width: 800px;
+    width: 1284px;
     left: 10px;
     border: 1px solid red;
 }
@@ -24,10 +24,9 @@
 }
 
 #box_center {
-    left: 300px;
-    top:  300px;
+    left: 542px;
+    top:  230px;
 }
-
 
 
 #box_tr {
@@ -43,4 +42,49 @@
 #box_br {
     bottom: 0px;
     right: 0px;
+}
+
+
+/**
+animaciones
+ */
+
+/* transform: translate(50px, 50px) */
+.translate:hover {
+    transform: translate(50px, 50px);
+}
+
+/* Scale - transform: scale(2,2) */
+.scale:hover {
+    transform: scale(2,2);
+}
+
+/* Skew - transform: skew(20deg, 0); */
+.skew:hover {
+    transform: skew(20deg, 0);
+}
+
+/*  Skew - transform: skew(20deg, 20deg); */
+skew3:hover {
+    transform: skew(20deg, 20deg);
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+}
+
+/* Animaciones con Keyframes */
+@keyframes colors {
+    0% {background: #7decec;}
+    25% {background: #bee7e7; width: 150px;}
+    50% {background: #fff; width: 200px;}
+    75% {background: #bee7e7; width: 150px;}
+    100% {background: #7decec; width: 100px;}
+}
+
+.colors{
+    animation-name: colors;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 }
