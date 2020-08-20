@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    padding: 5px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 10px;
+    border: 1px solid red;
+}
+
+.boxes {
+    background: #7ae3e7;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+}
+#box_tl {
+    left: 0px;
+    top: 0px;
+}
+
+#box_tr {
+    right: 0px;
+    top: 0px;
+}
+
+#box_center {
+    left: 40%;
+    top:  35%;
+}
+
+#box_bl {
+    left: 0px;
+    bottom: 0px;
+}
+
+#box_br {
+    right: 0px;
+    bottom: 0px;
+}
+
+
+/**
+animaciones
+ */
+
+/* transform: translate(50px, 50px) */
+#box_tl:hover {
+    transform: translate(50px, 50px);
+}
+
+/* Scale - transform: scale(2,2) */
+#box_center:hover {
+    transform: scale(2,2);
+}
+
+/* Skew - transform: skew(20deg, 0); */
+#box_tr:hover {
+    transform: skew(20deg, 0);
+}
+
+/*  Skew - transform: skew(20deg, 20deg); */
+skew3:hover {
+    transform: skew(20deg, 20deg);
+}
+
+#box_br:hover {
+    transform: rotate(45deg);
+}
+
+/* Animaciones con Keyframes */
+@keyframes colors {
+    0% {background: #7decec;}
+    25% {background: #bee7e7; width: 150px;}
+    50% {background: #fff; width: 200px;}
+    75% {background: #bee7e7; width: 150px;}
+    100% {background: #7decec; width: 100px;}
+}
+
+#box_bl{
+    animation-name: colors;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+
+@media screen and (min-width: 761px) {
+    .boxes{
+        background: #8c4c7c;
+    }
+    @keyframes colors {
+        0% {background: #ff00fc;}
+        25% {background: #a419ab; width: 150px;}
+        50% {background: #ffffff; width: 200px;}
+        75% {background: #bd5fc4; width: 150px;}
+        100% {background: #c45de0; width: 100px;}
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .boxes{
+        width: 110px;
+        height: 110px;
+        background-color: orange;
+    }
+    #box_center {
+        left: 34%;
+        top:  40%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .boxes{
+        width: 100px;
+        height: 100px;
+        background-color: #00ff73;
+
+    }
+    #box_center {
+        left: 34%;
+        top:  40%;
+    }
+}
+
