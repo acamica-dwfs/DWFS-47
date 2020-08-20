@@ -50,17 +50,17 @@ animaciones
  */
 
 /* transform: translate(50px, 50px) */
-.translate:hover {
+#box_tl:hover {
     transform: translate(50px, 50px);
 }
 
 /* Scale - transform: scale(2,2) */
-.scale:hover {
+#box_center:hover {
     transform: scale(2,2);
 }
 
 /* Skew - transform: skew(20deg, 0); */
-.skew:hover {
+#box_tr:hover {
     transform: skew(20deg, 0);
 }
 
@@ -69,7 +69,7 @@ skew3:hover {
     transform: skew(20deg, 20deg);
 }
 
-.rotate:hover {
+#box_br:hover {
     transform: rotate(45deg);
 }
 
@@ -82,7 +82,7 @@ skew3:hover {
     100% {background: #7decec; width: 100px;}
 }
 
-.colors{
+#box_bl{
     animation-name: colors;
     animation-duration: 3s;
     animation-timing-function: ease;
