@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color:#504e4e42}
+main {
+    width:800px;
+    height:800px;
+    position: relative;
+    background-color: white;
+}
+.caja1 {
+    width: 400px;
+    height: 400px;
+    float: left;
+    background-color: blue;
+}
+.caja2 {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 0, 170);
+    float: right;
+}
+@media screen and (max-width: 800px) {
+    .caja1{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(166, 255, 0);
+        float: none;
+    }
+    .caja2{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(0, 255, 255);
+        float: none;
+    }
+}
