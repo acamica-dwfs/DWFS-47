@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    padding: 5px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 10px;
+    border: 1px solid red;
+}
+
+.boxes {
+    background: #7ae3e7;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+}
+#box_tl {
+    left: 0px;
+    top: 0px;
+}
+
+#box_tr {
+    right: 0px;
+    top: 0px;
+}
+
+#box_center {
+    left: 50%;
+    top:  50%;
+}
+
+#box_bl {
+    left: 0px;
+    bottom: 0px;
+}
+
+#box_br {
+    right: 0px;
+    bottom: 0px;
+}
+
+
+/**
+animaciones
+ */
+
+/* transform: translate(50px, 50px) */
+#box_tl:hover {
+    transform: translate(50px, 50px);
+}
+
+/* Scale - transform: scale(2,2) */
+#box_center:hover {
+    transform: scale(2,2);
+}
+
+/* Skew - transform: skew(20deg, 0); */
+#box_tr:hover {
+    transform: skew(20deg, 0);
+}
+
+/*  Skew - transform: skew(20deg, 20deg); */
+skew3:hover {
+    transform: skew(20deg, 20deg);
+}
+
+#box_br:hover {
+    transform: rotate(45deg);
+}
+
+/* Animaciones con Keyframes */
+@keyframes colors {
+    0% {background: #7decec;}
+    25% {background: #bee7e7; width: 150px;}
+    50% {background: #fff; width: 200px;}
+    75% {background: #bee7e7; width: 150px;}
+    100% {background: #7decec; width: 100px;}
+}
+
+#box_bl{
+    animation-name: colors;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 761px) {
+    @keyframes colors {
+        0% {background: red;}
+        25% {background: #ec2020; width: 150px;}
+        50% {background: rgb(255, 187, 187); width: 200px;}
+        75% {background: #ff3030; width: 150px;}
+        100% {background: #ff2323; width: 100px;}
+    }
+    .boxes {
+        background-color: red;       
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .boxes {
+        background-color: green;       
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .boxes {
+        background-color: purple;       
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .boxes {
+        background-color: orange;       
+    }
+}
