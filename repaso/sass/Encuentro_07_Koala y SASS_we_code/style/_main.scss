@@ -1,0 +1,60 @@
+/*estilos generales de main*/
+h2 {
+    color: $secondary-color;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 15px;
+}
+p {
+    color: $primary-color;
+    font-size: 16px;
+}
+.btn{
+    margin: 20px auto;
+    width: 80px;
+    padding: 10px;
+    color: $bg;
+    background: linear-gradient( 109.6deg,  $primary-gradient 11.2%, $secondary-gradient 91.1% );
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.btn:hover{
+    border: 2px solid $primary-gradient;
+    color: #000;
+    background: none;
+}
+/*estilos particulares*/
+main {
+    padding-top:  50px;
+    .articleContainer {
+        padding: 40px 10px;
+            .articuloIzquierdo {
+                float: left;
+                width: 50%;
+            }
+            .articuloDerecho {
+                display: inline-block;
+                width: 50%;
+            }
+    }
+    .contact{
+        form {
+            border:2px solid $primary-gradient;
+            padding: 10px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        label, button, input {
+            width: 100%;
+            display: block;
+            margin-top: 5px
+        }
+        input{
+            padding: 10px;
+        }
+        button{
+            margin: 15px 0;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+/*anidamiento*/
+header{
+    padding: 20px 10%;
+    width: 100%;
+    h1{
+        float: left;
+    }
+    nav{
+        float: right;
+        ul{
+            line-height: 40px;
+            list-style: none;
+            li{
+                display: inline;
+                padding: 0 15px 10px 15px;
+                /*uso operador & para indicar la pseudoclase*/
+                &:hover{
+                    color: $color-primary;
+                    border-bottom: 3px solid $bg-primary;
+                }
+                a{
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

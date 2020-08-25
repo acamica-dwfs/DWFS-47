@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,2BAA2B;ACA3B,sDAAsD;ADGtD,uBAAuB;;AACvB,IAAK;EACD,gBAAgB,ECJV,SAAS;EDKf,KAAK,ECJG,QAAQ;EDKhB,SAAS,ECJF,IAAI",
+"sources": ["../../../sass/ejemplo%201/style/style.scss","../../../sass/ejemplo%201/style/_variables.scss"],
+"names": [],
+"file": "style.css"
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <!--logo-->
+        <img src="https://via.placeholder.com/50" alt="" class="logo">
+        <h1>Blog</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Blogs</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="articleContainer">
+            <article class="articuloIzquierdo">
+                <h2>Título de Post 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis est id felis tincidunt lobortis id eu dolor. Maecenas auctor velit lacus, vitae congue ipsum blandit ut. Suspendisse mattis libero lorem, et blandit justo congue ac. Quisque at mauris id risus consectetur imperdiet. Donec eget auctor arcu, ut malesuada orci. Donec in tortor convallis, scelerisque tortor id, consectetur purus. Duis porta sollicitudin lacus tristique scelerisque. Cras sed sagittis lorem. Phasellus nec eleifend ligula, vitae laoreet ex.</p>
+                <button class="btn">Ver Más</button>
+            </article>
+            <article class="articuloDerecho">
+                <h2>Título de Post 2</h2>
+                <p>Sed porta commodo arcu sed volutpat. Curabitur erat ex, dictum id volutpat sit amet, tincidunt id ex. Donec libero enim, facilisis sit amet quam eget, dapibus rutrum nunc. Curabitur accumsan eros in mi luctus mollis. Fusce iaculis tortor id dui tempor condimentum. Aliquam diam leo, finibus eget lorem a, accumsan porttitor tellus. Curabitur quis massa dolor. Aenean lacinia semper mattis. Morbi at tortor vitae lacus euismod consectetur ac varius metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec ultrices erat nisi, a volutpat erat elementum a. Sed consequat congue lectus id facilisis. Proin nec arcu id nibh interdum lobortis. Duis rutrum facilisis ultrices. Proin sollicitudin aliquam diam a ullamcorper.</p>
+                <button class="btn">Ver Más</button>
+            </article>
+        </section>
+        <section class="contact">
+            <h2>CONTACTO</h2>
+            <form action="" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="John">
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" placeholder="Doe">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="johndoe@mail.com" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" min="1" name="edad" id="edad">
+
+                <button class="btn" type="submit">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2020</p>
+    </footer>
+</body>
+</html>

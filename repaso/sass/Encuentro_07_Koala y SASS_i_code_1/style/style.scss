@@ -1,0 +1,73 @@
+/*segmentación de estilos*/
+@import "variables";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+/*Extensión de estilo con prefijo %*/
+%button {   
+    border-radius: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    color: #fff;
+    filter: brightness(90%);
+    /*operador &*/
+    &:hover{
+        filter: brightness(110%);
+    }
+}
+
+body{
+    background: $bg-primary;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*anidamiento*/
+form{
+    background: $bg-secondary;
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $border-primary;
+    input{
+        border-radius: 5px;
+        border: 1px solid $border-primary;
+        width: 100%;
+        padding: 10px;
+        display: block;
+        &:focus{
+            border: 1px dashed $btn-primary;
+        }
+    }
+    textarea{
+        /*Extensión de estilo de un elemento particular*/
+        @extend input;
+        resize: none;
+    }
+    label{
+        display: inline-block;
+        margin: 10px 0;
+    }
+    .ctn-btn {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 0 0;
+        button[type="reset"]{
+            /*Extensión de estilo con prefijo %*/
+            @extend %button;
+            background: $btn-secondary;
+            margin-right: 20px;
+        }
+        button[type="submit"]{
+            @extend %button;
+            background: $btn-primary;
+        }
+    }
+}

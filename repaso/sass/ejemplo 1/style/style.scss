@@ -1,0 +1,9 @@
+/*segmentación de estilos*/
+@import "variables";
+
+/* Use the variables */
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+}

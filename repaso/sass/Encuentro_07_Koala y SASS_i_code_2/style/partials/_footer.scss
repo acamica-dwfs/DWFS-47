@@ -1,0 +1,28 @@
+
+footer{
+    width: 100%;
+    padding: 20px 10%;
+    p{
+        padding: 20px 0;
+        float: left;
+    }
+    .contact{
+        padding: 10px;
+        float: right;
+        a{
+            text-decoration: none;
+            img{
+                /*extendido estilo*/
+                @extend %circle;
+                /*diferente*/
+                line-height: unset;
+                margin-left: 20px;
+                padding: 10px;
+                border: none;
+                &:hover{
+                    background: $shadow;
+                }
+            }
+        }
+    }   
+}
