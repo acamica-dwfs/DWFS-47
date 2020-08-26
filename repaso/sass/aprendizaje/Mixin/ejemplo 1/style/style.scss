@@ -1,18 +1,11 @@
-.button-basic  {
-    border: none;
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid blue;
 }
 
-.button-report  {
-    @extend .button-basic;
-    background-color: red;
-}
-
-.button-submit  {
-    @extend .button-basic;
+.danger {
+    @include important-text;
     background-color: green;
-    color: white;
 }

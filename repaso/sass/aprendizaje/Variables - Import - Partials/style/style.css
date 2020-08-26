@@ -1,9 +1,17 @@
 @charset "UTF-8";
 /*segmentación de estilos*/
 /* Define standard variables and values for website */
+/**
+strings
+numbers
+colors
+booleans
+lists
+nulls
+ */
 /* Use the variables */
 body {
-  background-color: lightblue;
+  background-color: red;
   color: darkblue;
   font-size: 18px; }
 

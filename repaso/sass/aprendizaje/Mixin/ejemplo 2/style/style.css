@@ -1,7 +1,12 @@
+/* Define mixin with two arguments */
 .myArticle {
   border: 1px solid blue;
-}
+  background: #1fb3ed;
+  font-size: 10px; }
 
 .myNotes {
   border: 2px solid red;
-}
+  background: #1fb3ed;
+  font-size: 10px; }
+
+/*# sourceMappingURL=style.css.map */

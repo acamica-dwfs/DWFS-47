@@ -1,6 +1,8 @@
 /* Define mixin with two arguments */
 @mixin bordered($color, $width) {
     border: $width solid $color;
+    background: #1fb3ed;
+    font-size: 10px;
 }
 
 .myArticle {
