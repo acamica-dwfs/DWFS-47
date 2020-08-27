@@ -1,0 +1,52 @@
+.ai {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: row wrap;
+}
+.ai-col {
+    width: 500px;
+    height: 300px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.ai-start {
+    align-items: flex-start;
+}
+.ai-end {
+    align-items: flex-end;
+}
+.ai-center {
+    align-items: center;
+}
+/*lineas de stretch*/
+.box-bas-1 {
+    color: #000;
+    line-height: 120px;
+}
+.box-bas-2 {
+    font-size: 38px;
+}
+.box-bas-3 {
+    font-size: 2px;
+}
+.box-bas-4 {
+    color: #000;
+    line-height: 90px;
+    font-size: 56px;
+}
+.ai-baseline {
+    align-items: baseline;
+}
+.ai-stretch {
+    align-items: stretch;
+}
+.ai-stretch div{
+    height: unset;
+}
+.ai-col-stretch div{
+    width: unset;
+}

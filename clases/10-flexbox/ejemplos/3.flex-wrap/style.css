@@ -1,0 +1,27 @@
+
+/*1.2.flex-direction*/
+.flex {
+    display: flex;
+}
+
+.wrap {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.nowrap {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.wrap_reverse {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}

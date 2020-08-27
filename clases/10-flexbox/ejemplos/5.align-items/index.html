@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="../style-general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+    <h1>Flexbox - Propiedades elementos padre</h1>
+    <!--align-items, alineacion en base al eje transversal: row-vertical y column-horizontal-->
+    <h2>align-items</h2>
+    <p>align-items con flex-direction: row</p>
+    <h3>align-items: flex-start</h3>
+    <div class="ai ai-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>align-items: flex-end</h3>
+    <div class="ai ai-end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>align-items: center</h3>
+    <div class="ai ai-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <!--Se modifican los font-size y line-height de algunas boxes para mostrar la alineacion en base a la fuente que hace baseline-->
+    <h3>align-items: baseline</h3>
+    <div class="ai ai-baseline">
+        <div class="box box-bas-1">1</div>
+        <div class="box box-bas-2">2</div>
+        <div class="box box-bas-3">3</div>
+        <div class="box box-bas-4">4</div>
+    </div>
+    <!--Se sace aca el height a los elementos para que funcione el stretch-->
+    <h3>align-items: stretch</h3>
+    <div class="ai ai-stretch">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <p>align-items con flex-direction: column</p>
+    <h3>align-items: flex-start</h3>
+    <div class="ai-col ai-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>align-items: flex-end</h3>
+    <div class="ai-col ai-end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <h3>align-items: center</h3>
+    <div class="ai-col ai-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <!--Se sace aca el width a los elementos para que funcione el stretch-->
+    <h3>align-items: stretch</h3>
+    <div class="ai-col ai-col-stretch">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</main>
+</body>
+</html>
