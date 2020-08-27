@@ -93,7 +93,7 @@ header nav .menu input:checked ~ span:nth-last-child(3) {
 header nav .menu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(1px, 0px);
 }
-/*menu simple con tamaño menor a 1000px*/
+/*menu simple con tamaño mayor a 1000px*/
 @media screen and (min-width: 1000px){
     header nav .menu ul {
         position: relative;

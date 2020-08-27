@@ -1,10 +1,10 @@
 
-/*1.2.flex-direction*/
+/*1.2.flex-direction: row - column*/
 .flex {
     display: flex;
 }
 
-/*1.2.flex-direction*/
+/*1.2.flex-direction: row - column*/
 .row {
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
     flex-direction: column-reverse;
 }
 
-/*1.2.flex-direction-wrap*/
+/*1.2.flex-direction: row - column-wrap*/
 .wrap {
     border: 1px solid #000;
     width: 200px;
@@ -45,7 +45,7 @@
     flex-wrap: wrap-reverse;
 }
 
-/*1.2.flex-direction-flow*/
+/*1.2.flex-direction: row - column-flow*/
 .wrap_row{
     border: 1px solid #000;
     width: 200px;

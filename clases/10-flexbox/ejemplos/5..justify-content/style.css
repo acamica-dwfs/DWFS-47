@@ -1,13 +1,6 @@
 /*1.2.flex-direction: row - column-flow*/
-/*propiedad abreviada  para combinar  flex-direction y  flex-wrap
- puedes  establecer filas  y envolverlas
+/*alinea los elementos horizontalmente
 */
-.wrap_row{
-    border: 1px solid #000;
-    width: 200px;
-    display: flex;
-    flex-flow: row wrap;
-}
 
 /*justify-content*/
 .jc {

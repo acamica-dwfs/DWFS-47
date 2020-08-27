@@ -1,4 +1,4 @@
-/*1.2.flex-direction*/
+/*1.2.flex-direction: row - column : direccion de los elementos en el contenedor*/
 .row {
     display: flex;
     flex-direction: row;
