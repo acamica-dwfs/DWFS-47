@@ -1,0 +1,32 @@
+/*1.2.flex-direction: row - column*/
+/**
+especifica si los elementos son forzados a una
+sola linea  o pueden ser envueltos en multiples lineas
+ */
+
+
+/*los elementos se envuelven alrededor de líneas adicionales*/
+.wrap {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*cada elemento se ajusta a una sola linea*/
+.nowrap {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+/*Los elementos se envuelven alrededor de líneas adicionales en reversa*/
+.wrap_reverse {
+    border: 1px solid #000;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
