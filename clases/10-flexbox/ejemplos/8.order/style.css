@@ -34,4 +34,9 @@
 .ac-stretch {
     align-content: stretch;
 }
-
+.ac-stretch div{
+    height: unset;
+}
+.ac-stretch-col div{
+    width: unset;
+}
