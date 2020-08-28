@@ -25,6 +25,7 @@
 .container nav {
     list-style: none;
     display: flex;
+    margin-right: 100px;
     flex-flow: row wrap;
 }
 
@@ -32,4 +33,11 @@
     padding: 10px;
 }
 
+.izquierda nav {
+    width: 25%;
+    background-color: rgb(236, 250, 245);
+}
 
+.izquierda nav li {
+    list-style: none;
+}
