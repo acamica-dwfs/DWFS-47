@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    margin: 50px;
+}
+h2 {
+    border-top: 2px solid #00a3a3;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    background: #4a72ca;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    margin: 5px;
+}
+
+.parent {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*order*/
+.order_child {
+    order: 1;
+}
+.order_child_neg {
+    order: -1;
+}
+
+/*flex-grow*/
+.grow_parent .box {
+    width: unset;
+    min-width: 10%;
+}
+.grow_child {
+    flex-grow: 2;
+}
+.grow_child2 {
+    flex-grow: 0.5;
+}
+
+/*flex-shrink*/
+.shrink {
+    flex-flow: row nowrap;
+}
+.shrink .box {
+    width: 40%;
+}
+
+.shrink_child {
+    flex-shrink: 0;
+}
+.shrink_child2 {
+    flex-shrink: 2;
+}
+
+/*flex-basis*/
+.basis_child {
+    flex-basis: 300px;
+}
+.basis_child2 {
+    flex-basis: 10%;
+}
+
+/*align-self*/
+.as_auto {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: flex-start;
+}
+.as_auto .child {
+    align-self: auto;
+}
+
+
+.as_start {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: flex-end;
+}
+.as_start .child {
+    align-self: flex-start;
+}
+
+.as_end {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: flex-start;
+}
+.as_end .child {
+    align-self: flex-end;
+}
+
+.as_center {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: flex-start;
+}
+.as_center .child {
+    align-self: center;
+}
+
+.as_baseline {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: center;
+}
+
+.child1 {
+    line-height: 20px;
+}
+.child3 {
+    line-height: 5px;
+}
+.child4 {
+    font-size: 25px;
+}
+
+
+.as_baseline .child {
+    align-self: baseline;
+}
+
+.as_stretch {
+    height: 200px;
+    border: 1px solid #000;
+    align-items: flex-start;
+}
+.as_stretch .child {
+    height: auto;
+    align-self: stretch;
+}

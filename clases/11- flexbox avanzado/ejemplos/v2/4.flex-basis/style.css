@@ -1,0 +1,7 @@
+/*flex-basis*/
+.basis_child {
+    flex-basis: 300px;
+}
+.basis_child2 {
+    flex-basis: 10%;
+}

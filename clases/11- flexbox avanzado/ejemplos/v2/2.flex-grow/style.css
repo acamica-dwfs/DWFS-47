@@ -1,0 +1,11 @@
+/*flex-grow*/
+.grow_parent .box {
+    width: unset;
+    min-width: 10%;
+}
+.grow_child {
+    flex-grow: 2;
+}
+.grow_child2 {
+    flex-grow: 0.5;
+}

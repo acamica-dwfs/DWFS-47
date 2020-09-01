@@ -1,0 +1,14 @@
+/*flex-shrink*/
+.shrink {
+    flex-flow: row nowrap;
+}
+.shrink .box {
+    width: 40%;
+}
+
+.shrink_child {
+    flex-shrink: 0;
+}
+.shrink_child2 {
+    flex-shrink: 2;
+}
