@@ -1,0 +1,23 @@
+.shrink-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.flex-item {
+    background: tomato;
+    padding: 10px;
+    border: 5px solid red;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    flex-basis: 20em
+}
+
+.flex1 {
+    flex-shrink: 1
+}
+.flex2 {
+    flex-shrink: 2
+}

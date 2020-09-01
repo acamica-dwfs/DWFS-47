@@ -1,0 +1,16 @@
+.order-container{
+    display: flex;
+}
+
+.order-item{
+    background: tomato;
+    border: 3px solid rgba(0,0,0,.2);
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    flex-basis: 200px;
+}
+
+.order-item:nth-of-type(2) { order: 1; }
