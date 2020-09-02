@@ -63,3 +63,8 @@ main section article {
 main section article img {
     margin-right: 20px;
 }
+main section article:nth-child(2n) img {
+    order: 1;
+    margin-right: 0;
+    margin-left: 20px;
+}

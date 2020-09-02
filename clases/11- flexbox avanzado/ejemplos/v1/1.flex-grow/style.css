@@ -1,3 +1,7 @@
+/**
+Especifica el factor de crecimiento de un elemento flexible
+ */
+
 .grow-container {
     padding: 0;
     margin: 0;

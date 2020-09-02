@@ -1,68 +1,72 @@
-/*align-self*/
 .as_auto {
     height: 200px;
     border: 1px solid #000;
-    align-items: flex-start;
+    align-items: flex-start
 }
 
 .as_auto .child {
-    align-self: auto;
+    align-self: auto
 }
 
 .as_start {
     height: 200px;
     border: 1px solid #000;
-    align-items: flex-end;
+    align-items: flex-end
 }
+
 .as_start .child {
-    align-self: flex-start;
+    align-self: flex-start
 }
 
 .as_end {
     height: 200px;
     border: 1px solid #000;
-    align-items: flex-start;
+    align-items: flex-start
 }
+
 .as_end .child {
-    align-self: flex-end;
+    align-self: flex-end
 }
 
 .as_center {
     height: 200px;
     border: 1px solid #000;
-    align-items: flex-start;
+    align-items: flex-start
 }
+
 .as_center .child {
-    align-self: center;
+    align-self: center
 }
 
 .as_baseline {
     height: 200px;
     border: 1px solid #000;
-    align-items: center;
+    align-items: center
 }
 
 .child1 {
-    line-height: 20px;
-}
-.child3 {
-    line-height: 5px;
-}
-.child4 {
-    font-size: 25px;
+    line-height: 20px
 }
 
+.child3 {
+    line-height: 5px
+}
+
+.child4 {
+    font-size: 25px
+}
 
 .as_baseline .child {
-    align-self: baseline;
+    align-self: baseline
 }
 
 .as_stretch {
     height: 200px;
     border: 1px solid #000;
-    align-items: flex-start;
+    align-items: flex-start
 }
+
 .as_stretch .child {
     height: auto;
-    align-self: stretch;
+    align-self: stretch
 }

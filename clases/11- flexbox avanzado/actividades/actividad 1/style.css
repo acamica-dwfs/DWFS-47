@@ -26,9 +26,6 @@ header nav ul {
     flex-flow: row wrap;
 }
 
-header nav ul {
-    -webkit-box-direction: normal;
-}
 
 header nav ul li {
     padding: 0 20px;
@@ -65,11 +62,7 @@ main section article img {
     margin-right: 20px;
 }
 
-main section article:nth-child(2n) img {
-    order: 2;
-    margin-right: 0;
-    margin-left: 20px;
-}
+
 
 /**
 responsive
