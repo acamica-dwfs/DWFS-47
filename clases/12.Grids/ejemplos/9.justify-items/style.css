@@ -329,8 +329,3 @@
 .span div:nth-child(3n) {
     grid-column-end: span 2;
 }
-
-/*minmax*/
-.minmax {
-    grid-template: repeat(2, 1fr) / repeat(4, minmax(200px, 1fr));
-}
