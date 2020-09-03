@@ -1,0 +1,8 @@
+/*grid-area*/
+.area {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.area .selected {
+    background: rgb(238, 84, 84);
+    grid-area: 1 / 2 / 3 / 4;
+}

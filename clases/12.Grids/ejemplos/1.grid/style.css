@@ -1,0 +1,433 @@
+.parent {
+    display: grid;
+}
+
+/*grid-template-column*/
+.tem-col-px {
+    grid-template-columns: 20px 20px 20px 20px;
+}
+.tem-col-rem {
+    grid-template-columns: 3rem 3rem;
+}
+.tem-col-porc {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.tem-col-fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tem-col-rep-fr {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*grid-template-row*/
+.tem-row {
+    grid-template-rows: repeat(4, 1fr 2fr);
+}
+
+/*grid-template*/
+.tem-row-col {
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+}
+
+/*5.grid-gap*/
+.gap-row {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-row-gap: 5px;
+}
+
+.gap-col {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-column-gap: 5px;
+}
+
+.gap {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+/*6.grid-row*/
+.row-start {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row-start .selected {
+    background: rgb(238, 84, 84);
+    grid-row-start: 3;
+}
+
+.row-end {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row-end .selected {
+    background: rgb(238, 84, 84);
+    grid-row-end: 3;
+}
+
+.row {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row .selected {
+    background: rgb(238, 84, 84);
+    grid-row: 1 / 4;
+}
+
+/*grid-column*/
+.column-start {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.column-start .selected {
+    background: rgb(238, 84, 84);
+    grid-column-start: 4;
+}
+
+.column-end {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.column-end .selected {
+    background: rgb(238, 84, 84);
+    grid-column-end: 4;
+}
+
+.column {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.column .selected {
+    background: rgb(238, 84, 84);
+    grid-column: 1 / 4;
+}
+
+/*grid-area*/
+.area {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.area .selected {
+    background: rgb(238, 84, 84);
+    grid-area: 1 / 2 / 3 / 4;
+}
+
+/*justify-items*/
+.ji-start {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    justify-items: start;
+}
+.ji-start .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ji-end {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    justify-items: end;
+}
+.ji-end .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ji-center {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    justify-items: center;
+}
+.ji-center .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ji-stretch {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    justify-items: stretch;
+}
+.ji-stretch .box {
+    height: 50px;
+    width: unset;
+}
+
+/*align-items*/
+.ai-start {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    align-items: start;
+}
+.ai-start .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ai-end {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    align-items: end;
+}
+.ai-end .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ai-center {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    align-items: center;
+}
+.ai-center .box {
+    height: 50px;
+    width: 50px;
+}
+
+.ai-stretch {
+    border: 1px solid #000;
+    height: 200px;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    align-items: stretch;
+}
+.ai-stretch .box {
+    height: unset;
+    width: 50px;
+}
+
+/*justify-content*/
+.jc-start {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: start;
+}
+
+.jc-end {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: end;
+}
+
+.jc-center {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: center;
+}
+
+.jc-stretch {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: stretch;
+}
+
+.jc-around {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: space-around;
+}
+
+.jc-between {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: space-between;
+}
+
+.jc-evenly {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    justify-content: space-evenly;
+}
+
+/*align-content*/
+.ac-start {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: start;
+}
+
+.ac-end {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: end;
+}
+
+.ac-center {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: center;
+}
+
+.ac-stretch {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: stretch;
+}
+
+.ac-around {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: space-around;
+}
+
+.ac-between {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: space-between;
+}
+
+.ac-evenly {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(4, 50px) / repeat(2, 50px);
+    align-content: space-evenly;
+}
+
+/*place-content*/
+.pc-1 {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    place-content: start end;
+}
+
+.pc-2 {
+    border: 1px solid #000;
+    width: 300px;
+    height: 300px;
+    grid-template: repeat(2, 50px) / repeat(4, 50px);
+    place-content: center;
+}
+
+/*justify-self*/
+.js-start {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.js-start .selected {
+    background: rgb(238, 84, 84);
+    justify-self: start;
+}
+
+.js-end {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.js-end .selected {
+    background: rgb(238, 84, 84);
+    justify-self: end;
+}
+
+.js-center {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.js-center .selected {
+    background: rgb(238, 84, 84);
+    justify-self: center;
+}
+
+.js-stretch {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.js-stretch .selected {
+    background: rgb(238, 84, 84);
+    justify-self: stretch;
+}
+
+/*align-self*/
+.as-start {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.as-start .selected {
+    background: rgb(238, 84, 84);
+    height: 25px;
+    line-height: 25px;
+    align-self: start;
+}
+
+.as-end {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.as-end .selected {
+    background: rgb(238, 84, 84);
+    height: 25px;
+    line-height: 25px;
+    align-self: end;
+}
+
+.as-center {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.as-center .selected {
+    background: rgb(238, 84, 84);
+    height: 25px;
+    line-height: 25px;
+    align-self: center;
+}
+
+.as-stretch {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.as-stretch .selected {
+    background: rgb(238, 84, 84);
+    height: unset;
+    align-self: stretch;
+}
+
+/*place-self*/
+.ps-1 {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.ps-1 .selected {
+    background: rgb(238, 84, 84);
+    height: 25px;
+    line-height: 25px;
+    place-self: start end;
+}
+
+.ps-2 {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.ps-2 .selected {
+    background: rgb(238, 84, 84);
+    height: 25px;
+    line-height: 25px;
+    place-self: center;
+}
+
+/*span*/
+.span {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.span div:nth-child(3n) {
+    grid-column-end: span 2;
+}
+
+/*minmax*/
+.minmax {
+    grid-template: repeat(2, 1fr) / repeat(4, minmax(200px, 1fr));
+}

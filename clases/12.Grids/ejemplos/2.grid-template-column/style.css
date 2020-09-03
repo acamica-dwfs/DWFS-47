@@ -1,0 +1,18 @@
+.parent {
+    display: grid;
+}
+.tem-col-px {
+    grid-template-columns: 20px 20px 20px 20px;
+}
+.tem-col-rem {
+    grid-template-columns: 3rem 3rem;
+}
+.tem-col-porc {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.tem-col-fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.tem-col-rep-fr {
+    grid-template-columns: repeat(4, 1fr);
+}

@@ -1,0 +1,28 @@
+.parent {
+    display: grid;
+}
+
+/*6.grid-row*/
+.row-start {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row-start .selected {
+    background: rgb(238, 84, 84);
+    grid-row-start: 3;
+}
+
+.row-end {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row-end .selected {
+    background: rgb(238, 84, 84);
+    grid-row-end: 3;
+}
+
+.row {
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+}
+.row .selected {
+    background: rgb(238, 84, 84);
+    grid-row: 1 / 4;
+}

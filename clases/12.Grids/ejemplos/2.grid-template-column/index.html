@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Grids</h1>
+<h2>grid-template-column:</h2>
+<!--mostrar que grid funciona con todo tipo de unidades-->
+<h3>unidad absoluta - pixeles</h3>
+<p>grid-template-columns: 20px 20px 20px 20px;</p>
+<div class="tem-col-px parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - rem</h3>
+<p>grid-template-columns: 3rem 3rem;</p>
+<div class="tem-col-rem parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - porcentaje</h3>
+<p>grid-template-columns: 25% 25% 25% 25%;</p>
+<div class="tem-col-porc parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - fr - fraccion</h3>
+<p>grid-template-columns: 1fr 1fr 1fr 1fr;</p>
+<div class="tem-col-fr parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--funcion repeat para abreviar-->
+<h3>repeat()</h3>
+<p>repeat(4, 1fr)</p>
+<div class="tem-col-rep-fr parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+</body>
+</html>

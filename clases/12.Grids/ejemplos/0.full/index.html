@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Grids</h1>
+<h2>Display: grid</h2>
+<div class="parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+</div>
+<h2>grid-template-column:</h2>
+<!--mostrar que grid funciona con todo tipo de unidades-->
+<h3>unidad absoluta - pixeles</h3>
+<p>grid-template-columns: 20px 20px 20px 20px;</p>
+<div class="tem-col-px parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - rem</h3>
+<p>grid-template-columns: 3rem 3rem;</p>
+<div class="tem-col-rem parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - porcentaje</h3>
+<p>grid-template-columns: 25% 25% 25% 25%;</p>
+<div class="tem-col-porc parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>unidad relativa - fr - fraccion</h3>
+<p>grid-template-columns: 1fr 1fr 1fr 1fr;</p>
+<div class="tem-col-fr parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--funcion repeat para abreviar-->
+<h3>repeat()</h3>
+<p>repeat(4, 1fr)</p>
+<div class="tem-col-rep-fr parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-template-row:</h2>
+<p>grid-template-rows: repeat(4, 1fr 2fr);</p>
+<div class="tem-row parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-template: row / column</h2>
+<p>grid-template: 1fr 1fr / repeat(4, 1fr);</p>
+<div class="tem-row-col parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-row-gap</h2>
+<p>grid-row-gap: 5px;</p>
+<div class="gap-row parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-column-gap</h2>
+<p>grid-column-gap: 5px;</p>
+<div class="gap-col parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-gap</h2>
+<p>grid-gap: 5px;</p>
+<div class="gap parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-row-start</h2>
+<p>grid-row-start: 3;</p>
+<div class="row-start parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-row-end</h2>
+<p>grid-row-end: 3;</p>
+<div class="row-end parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-row: grid-row-start / grid-row-end</h2>
+<p>grid-row: 1 / 4;</p>
+<div class="row parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-column-start</h2>
+<p>grid-column-start: 4;</p>
+<div class="column-start parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-column-end</h2>
+<p>grid-column-end: 4;</p>
+<div class="column-end parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-column: grid-column-start / grid-column-end</h2>
+<p>grid-column: 1 / 4;</p>
+<div class="column parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end</h2>
+<p>grid-area: 1 / 2 / 3 / 4;</p>
+<div class="area parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--Aligns grid items along the row axis (all grid items inside the container) -->
+<h2>justify-items:</h2>
+<h3>start</h3>
+<div class="ji-start parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="ji-end parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="ji-center parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="ji-stretch parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--Aligns grid items along the column axis(all grid items inside the container)-->
+<h2>align-items:</h2>
+<h3>start</h3>
+<div class="ai-start parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="ai-end parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="ai-center parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="ai-stretch parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+<!--Para alinear la grid dentro del grid-container. Para alinearlo en el row axis-->
+<h2> justify-content: 	</h2>
+<h3>start</h3>
+<div class="jc-start parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="jc-end parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="jc-center parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="jc-stretch parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-around</h3>
+<div class="jc-around parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-between</h3>
+<div class="jc-between parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-evenly</h3>
+<div class="jc-evenly parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+<!--Para alinear la grid dentro del grid-container. Para alinearlo en el column axis-->
+<h2>  align-content:</h2>
+<h3>start</h3>
+<div class="ac-start parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="ac-end parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="ac-center parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="ac-stretch parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-around</h3>
+<div class="ac-around parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-between</h3>
+<div class="ac-between parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>space-evenly</h3>
+<div class="ac-evenly parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+<!--abreviacion de align-content y justify-content-->
+<h2>place-content: align-content / justify-content</h2>
+<p>place-content: start end</p>
+<div class="pc-1 parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<p>place-content: center (= center / center)</p>
+<div class="pc-2 parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+
+<!--Aligns a grid item inside a cell along the row axis (value applies to the content inside a single grid item)-->
+<h2>justify-self: start | end | center | stretch;</h2>
+<h3>start</h3>
+<div class="js-start parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="js-end parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="js-center parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="js-stretch parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--Aligns a grid item inside a cell along the column axis (value applies to the content inside a single grid item)-->
+<h2>align-self: start | end | center | stretch;</h2>
+place-self sets both the align-self and justify-self properties in a single declaration.</h2>
+<h3>start</h3>
+<div class="as-start parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>end</h3>
+<div class="as-end parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>center</h3>
+<div class="as-center parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h3>stretch</h3>
+<div class="as-stretch parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!--abreviacion de align-self y justify-self-->
+<h2>place-self: align-self justify-self </h2>
+<p>place-self: start end</p>
+<div class="ps-1 parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<p>place-self: center (= center / center)</p>
+<div class="ps-2 parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<h2>span</h2>
+<div class="span parent">
+    <div class="box">1</div>
+    <div class="box selected">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+<!-- Achicar navegador para ver -->
+<h2>minmax</h2>
+<div class="minmax parent">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+</div>
+</body>
+</html>

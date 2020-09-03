@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+main {
+    margin: 50px;
+}
+h2 {
+    border-top: 2px solid #00a3a3;
+}
+p {
+    font-size: 20px;
+    text-decoration: underline;
+}
+.box {
+    border: 1px solid #000;
+    background: #4a72ca;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+
+}
