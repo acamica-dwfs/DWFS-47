@@ -7,16 +7,16 @@
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 }
 .row-start .selected {
+    grid-row-start: 2;
     background: rgb(238, 84, 84);
-    grid-row-start: 3;
 }
 
 .row-end {
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 }
 .row-end .selected {
-    background: rgb(238, 84, 84);
     grid-row-end: 3;
+    background: rgb(238, 84, 84);
 }
 
 .row {

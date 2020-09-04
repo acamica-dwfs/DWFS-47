@@ -16,5 +16,5 @@
 
 .gap {
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-    grid-gap: 5px;
+    grid-gap: 20px 30px;
 }
