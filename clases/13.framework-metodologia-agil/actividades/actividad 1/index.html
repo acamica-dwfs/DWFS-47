@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <header class="mb-5">
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Configuración
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Tema</a>
+                            <a class="dropdown-item" href="#">Privacidad</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Cuenta</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--formulario-->
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Nacionalidad</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Argentina</option>
+                    <option>Chile</option>
+                    <option>Peru</option>
+                    <option>Uruguay</option>
+                    <option>Venezuela</option>
+                </select>
+            </div>
+            <div class="form-group form-check mt-5 mb-5">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Estudiante">
+                    <label class="form-check-label" for="inlineRadio1">Estudiante</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Profesor">
+                    <label class="form-check-label" for="inlineRadio2">Profesor</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Ninguno" disabled>
+                    <label class="form-check-label" for="inlineRadio3">Ninguno (disabled)</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <!--list group-->
+        <ul class="list-group list-group-flush mt-5">
+            <li class="list-group-item">Etiam finibus est at quam fringilla luctus.</li>
+            <li class="list-group-item">Sed placerat lacus nec odio faucibus mollis.</li>
+            <li class="list-group-item active">Mauris lacinia erat ac nisi auctor pretium.</li>
+            <li class="list-group-item">Nullam in arcu lobortis, fringilla libero id, porttitor lorem.</li>
+            <li class="list-group-item">Proin congue tellus nec lectus vestibulum, nec tristique tellus vestibulum.</li>
+        </ul>
+        <!--tabla-->
+        <table class="table mt-5 table-hover table-striped table-responsive-sm">
+            <thead class="bg-primary text-white">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Usuario</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Moe</td>
+                <td>Howard</td>
+                <td>@mhow</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Larry</td>
+                <td>Fine</td>
+                <td>@lfine</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Shemp</td>
+                <td>Howard</td>
+                <td>@show</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Curly</td>
+                <td>Howard</td>
+                <td>@chow</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Joe</td>
+                <td>Besser</td>
+                <td>@jbes</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Curly Joe</td>
+                <td>DeRita</td>
+                <td>@cjoedr</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--button group-->
+        <div class="btn-toolbar d-flex justify-content-center mt-5 mb-5" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary">1</button>
+                <button type="button" class="btn btn-primary">2</button>
+                <button type="button" class="btn btn-primary">3</button>
+                <button type="button" class="btn btn-primary">4</button>
+            </div>
+    </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
