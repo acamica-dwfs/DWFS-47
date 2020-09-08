@@ -15,7 +15,7 @@
     grid-template: repeat(2, 1fr) / repeat(4, 1fr);
 }
 .row-end .selected {
-    grid-row-end: 3;
+    grid-row-end: 2;
     background: rgb(238, 84, 84);
 }
 
