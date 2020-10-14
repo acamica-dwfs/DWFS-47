@@ -10,17 +10,24 @@
  * @type {(string|number)[]}
  */
 
-let data = ["auto", 1, 5, "rojo", "verde", 5, 11, "casa", 2];
-let no_number = [];
-let sum = 0;
-
-for (let i = 0; i < data.length; i++){
-    if(typeof data[i] === "number"){
-        sum += data[i];
-    } else {
-        no_number.push(data[i]);
+let buscador =  ()  => {
+    let  datos = new Array("10" , 1 , 6 , "a" , true, "56",  false , "hola", "0" , 100 ,  56);
+    let sum =  0;
+    let noNumericos = [];
+    console.log(datos.length)
+    for (let i = 0 ; i < datos.length ; i++ ) {
+        if(typeof  datos[i] === "number") {
+            sum +=  datos[i];  //  sum =  sum  + datos [i]
+        } else   {
+            noNumericos.push(datos[i]) // agregamos  un elemento
+        }
     }
+    // out
+    console.log(  "el total de los numeros es " +  sum );
+    console.log(  " los elementos no numericos "    );
+    console.log(noNumericos)
+    // sum -->   el total de los numero es  163
+    // noNumericos --> ["10", "a", true , "56", ... ]
 }
 
-("Resultado de la suma: " + sum);
-console.log("Datos no numéricos: " + no_number);
+buscador();
