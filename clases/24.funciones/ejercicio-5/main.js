@@ -18,12 +18,11 @@ var users = ["Pepe", "Juan", "Fiora", "Mafalda", "Salvador", "Gaviota"];
 let inicio =  () => {
     let  nombre  =  prompt("digite su nombre");
     let  elusuarioexiste = usuario(nombre); // asignacion de un resultado  devuelto por una  funcion
-    console.log( "de que tipo es  " +  elusuarioexiste);
     if(elusuarioexiste) { // elusuarioexiste
         alert( "ya existe en la lsita");
     } else {
         users.push(nombre);
-        alert(" hola "  +  nombre  +  "bienvenido al grupo");
+        alert(" hola "  +  nombre  +  " bienvenido al grupo");
     }
     console.log("array");
     console.log(users);
@@ -32,7 +31,7 @@ let inicio =  () => {
 let usuario =  (name) =>  {
     let existe = false;
     for (let a  = 0 ; a <  users.length ; a++) {
-        if(name === users[a]){
+        if(name === users[a]){ // buscador
             existe = true;
         }
     }
