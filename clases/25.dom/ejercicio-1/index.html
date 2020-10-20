@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>DOM</h1>
+<h2>Selección de nodos:</h2>
+<p id="parWithId">Parráfo con Id</p>
+<p class="parWithClass">Parráfo con clase</p>
+<p>Parráfo</p>
+<p>Parráfo con <span id="parSpan">span</span></p>
+<p class="parWithClass">Parráfo con clase</p>
+<p class="parWithClass">Parráfo con clase</p>
+
+<h2>Propiedades de los nodos:</h2>
+<img src="https://dummyimage.com/300x150/f2f2f2/aaa" id="imgWithAtt" alt="Placeholder image" class="img gray">
+<h3 id="oldId">Element.id</h3>
+<input type="text" id="inputValue" name="inputName" value="Texto preescrito, funciona igual con input de usuario">
+<h3>Título h3 con un <span>span</span> adentro</h3>
+<h3 id='titleWithSpan'>Título h3 con un <span>span</span> adentro</h3>
+<img src="https://dummyimage.com/300x150/f2f2f2/aaa" id="imgToChangeAtt" alt="Placeholder image">
+<ul id="elementList">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+</ul>
+
+
+<h2>Animar elementos:</h2>
+<h3>element.animate(keyframes, options)</h3>
+<div class="circle" id="animation"></div>
+
+<h2>Crear nuevos elementos e insertar nuevos nodos:</h2>
+<div id="nodeCtn"></div>
+<h2>Modificar nodos:</h2>
+<h3>element.remove()</h3>
+<ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li id="liToRemove">item3</li>
+    <li>item4</li>
+</ul>
+<h3>element.replaceWith(nuevoNodo) y element.replaceChild(nuevoNodo, viejoNodo);</h3>
+<ul id="list">
+    <li>item1</li>
+    <li id="liToReplace">item2</li>
+    <li>item3</li>
+    <li id="liToReplace2">item4</li>
+</ul>
+
+<script src="main.js"></script>
+</body>
+</html>
