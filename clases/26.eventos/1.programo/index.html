@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM: Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>EVENTOS</h1>
+<h2>Click y dbclick con .addEventListener</h2>
+<div class="square" id="clickBox">Click</div>
+<div class="square" id="dbclickBox">Double Click</div>
+
+<h2>Click y dbclick con on{evento}</h2>
+<div class="square" id="clickBoxOn">Click</div>
+<div class="square" id="dbclickBoxOn">Double Click</div>
+
+<h2>.removeEventListener</h2>
+<input type="button" value="Crear caja" id="createBoxBtn">
+<input type="button" value="Dejar de crear cajas" id="stopBoxesBtn">
+<p>El segundo botón remueve el event listener del primero evitando que cree más cajas al clickearse</p>
+<div id="boxCtn"></div>
+
+<h2>event.target</h2>
+<p>Clickear en los items para abrir y cerrar sublistas de items</p>
+<ul class="list2" id="subitemList">
+    <li class="item2">Item 1
+        <ul class="sublist">
+            <li class="subitem">Subitem 1.1</li>
+            <li class="subitem">Subitem 1.2</li>
+            <li class="subitem">Subitem 1.3</li>
+            <li class="subitem">Subitem 1.4</li>
+            <li class="subitem">Subitem 1.5</li>
+        </ul>
+    </li>
+    <li class="item2">Item 2
+        <ul class="sublist">
+            <li class="subitem">Subitem 2.1</li>
+            <li class="subitem">Subitem 2.2</li>
+        </ul>
+    </li>
+    <li class="item2">Item 3
+        <ul class="sublist">
+            <li class="subitem">Subitem 3.1</li>
+            <li class="subitem">Subitem 3.2</li>
+            <li class="subitem">Subitem 3.3</li>
+        </ul>
+    </li>
+    <li class="item2">Item 4
+        <ul class="sublist">
+            <li class="subitem">Subitem 4.1</li>
+            <li class="subitem">Subitem 4.2</li>
+            <li class="subitem">Subitem 4.3</li>
+            <li class="subitem">Subitem 4.4</li>
+            <li class="subitem">Subitem 4.5</li>
+        </ul>
+    </li>
+    <li class="item2">Item 5
+        <ul class="sublist">
+            <li class="subitem">Subitem 5.1</li>
+            <li class="subitem">Subitem 5.2</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>.stopPropagation()</h2>
+<p>Alerta elemento clickeado, probar clickear en los 3 elementos en ambos casos</p>
+<h3>Con .stopPropagation()</h3>
+<div class="bigBox" id="bigBoxWith">
+    <div class="square propSquare" id="squareWith">
+        <p class="par" id="parWith">Texto - párrafo</p>
+    </div>
+</div>
+<h3>Sin .stopPropagation()</h3>
+<div class="bigBox" id="bigBoxWithout">
+    <div class="square propSquare" id="squareWithout">
+        <p class="par" id="parWithout">Texto - párrafo</p>
+    </div>
+</div>
+
+<h2>Mouseover y mouseout</h2>
+<ul class="list">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+    <li class="item">Item 4</li>
+    <li class="item">Item 5</li>
+</ul>
+
+<h2>Mousedown y mouseup</h2>
+<div class="square" id="mouseBox"></div>
+
+<h2>Cut, copy y paste</h2>
+<input type="text" id="textCutCopy" value="Texto a Copiar y cortar">
+<p>Input para probar pegar lo copiado y cortado del texto anterior:</p>
+<input type="text">
+<p>Input mostrando el evento de pegar:</p>
+<input type="text" id="inputPaste" placeholder="No permite pegar">
+
+<h2>Focus y blur</h2>
+<p>Ingrese una nueva contraseña:</p>
+<input type="password" id="inputFocus" value="">
+<p id="passRecomendation" class="passRecomendation"></p>
+
+<h2>Keydown y keyup</h2>
+<h3>Ejemplo con Keyup</h3>
+<p>Probar escribir, tocar enter y backspace</p>
+<input type="text" id="key">
+<p id="keyText"></p>
+
+<h3>Ejemplo con Keydown</h3>
+<p>Probar escribir, tocar enter y backspace</p>
+<input type="text" id="key2">
+<p id="keyText2"></p>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 100px;
+}
+
+.square {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #ff4f4f;
+    margin: 0 20px 20px 0;
+    text-align: center;
+    line-height: 150px;
+    color: #ffffff;
+    user-select: none;
+}
+
+.color {
+    background-color: #5a5ada;
+}
+
+#boxCtn {
+    margin: 20px 0;
+}
+
+.sublist {
+    display: none;
+    margin: 10px;
+    text-align: left;
+    list-style: disc;
+}
+.list2 {
+    padding: 0;
+    width: 200px;
+    border: 1px solid #000;
+}
+.item2 {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+
+.propSquare{
+    line-height: 40px;
+}
+.bigBox {
+    width: 400px;
+    padding: 20px;
+    background-color: #5a5ada;
+}
+.par{
+    background-color: #000;
+}
+
+.list {
+    padding: 0;
+    width: 200px;
+    border: 1px solid #000;
+}
+
+.list li {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.passRecomendation {
+    width: 300px;
+    font-size: 12px;
+    color: #ff4f4f;
+}
