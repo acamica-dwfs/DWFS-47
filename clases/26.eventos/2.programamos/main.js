@@ -1,3 +1,12 @@
+/**
+ *
+ Crea un input de texto con un botón al lado.
+ Al presionar el botón o un enter escribe el contenido del input en un <li>
+ Añade un nuevo <li> con cada enter del usuario.
+ * @type {HTMLElement}
+ */
+
+
 let newTodo = document.getElementById('todo');
 let addBtn = document.getElementById('addTodo');
 let todoList = document.getElementById('todoList');
@@ -23,7 +32,7 @@ addBtn.addEventListener('click', () => {
 });
 
 newTodo.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') { //
+    if (event.key === 'Enter') { // event.keyCode === 13
         addTodo();
     }
 });
