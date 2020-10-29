@@ -1,12 +1,19 @@
 /**
  * https://majoledesma.github.io/js-notes/
+ * 1. hacer referencia al nodo
+ * 2. agregar  el addEventListener
+ * 3. definir el tipo de evento  (click, mouse ..)
+ * 4.  apliciar el callback
  */
+
+
 
 //CLICK - con .addEventListener() y on{Evento}
 let clickBox = document.getElementById("clickBox");
 clickBox.addEventListener('click', () => {
     clickBox.classList.toggle("color");
 });
+//dblo click
 let clickBoxOn = document.getElementById("clickBoxOn");
 clickBoxOn.onclick = () => {
     clickBoxOn.classList.toggle("color");
