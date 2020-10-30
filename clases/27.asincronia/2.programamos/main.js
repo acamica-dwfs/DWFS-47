@@ -15,3 +15,6 @@ let calculadora = function (n1, n2, callback){
 };
 
 console.log(calculadora(7, 7, mult));
+console.log(calculadora(7, 7, suma));
+console.log(calculadora(7, 7, div));
+console.log(calculadora(7, 7, resta));
