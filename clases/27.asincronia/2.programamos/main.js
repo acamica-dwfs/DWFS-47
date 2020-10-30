@@ -11,7 +11,9 @@ let mult = (n1, n2) => n1 * n2;
 let div = (n1, n2) => n1 / n2;
 
 let calculadora = function (n1, n2, callback){
-    return callback(n1, n2);
+    if(callback === 'function') {
+        return callback(n1, n2);
+    }
 };
 
 console.log(calculadora(7, 7, mult));
