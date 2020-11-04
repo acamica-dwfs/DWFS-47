@@ -1,30 +1,37 @@
 /*Traer información de la API de github*/
 //Hacer fetch de la información de un usuario de github por nombre
-//Hacer fetch de la información de los followers de ese usuario (con el endpoint devuelto en el fetch anterior) y hacer console.log del nombre de usuario de los primeros 5 followers.
+//Hacer fetch de la información de los followers de ese usuario
 
-const  URL = "https://api.github.com/users/";
-const USERNAME = 'yulian-zapata';
+const  URLGIT = "https://api.github.com/users/";
+//const  USERNAME = 'yulian-zapata';
 
-const getGithubUser = (username) => {
-    fetch(URL + username)
+
+const getGithubUser  =  (username) => {
+    fetch(  URLGIT + username )  // https://api.github.com/users/yulian-zapata
         .then(response => response.json())
         .then(json => {
-            console.log(json);
-        }).catch(err => {
-        console.error('fetch failed', err);
-    });
-}
-const getUserFirst5Followers = (username) => {
-    fetch(URL + username +'/followers')
-        .then(response => response.json())
-        .then(json => {
-            for(let i = 0; i < 5; i++){
-                console.log(json[i].login);
+            if(json.followers > 0) {
+                let img = document.querySelector(".github img");
+                let span = document.querySelector(".github span");
+                img.src = json.avatar_url;
+                span.textContent = "Su seguidores son :" + json.followers;
             }
         }).catch(err => {
-        console.error('fetch failed', err);
-    });
+            console.log("error de la api" + err);
+    })
 }
-
+const  getUserFirst5Followers =  (username) => {
+    fetch(  URLGIT + username + '/followers' )  // https://api.github.com/users/yulian-zapata/followers
+        .then(response => response.json())
+        .then(json => {
+            console.log("seguidores")
+            for (let i = 0 ; i <=  5 ; i++) {
+                console.log(json[i].login)
+            }
+        }).catch(err => {
+        console.log("error de la api" + err);
+    })
+}
+let USERNAME =  prompt("deme un usuario ");
 getGithubUser(USERNAME);
 getUserFirst5Followers(USERNAME);
