@@ -36,12 +36,6 @@ let crearHtml =  (poke) => {
 }*/
 
 
-
-
-
-
-
-
 let fetch1 = fetch('https://pokeapi.co/api/v2/pokemon/46')
     .then(response => response.json());
 let fetch2 = fetch('https://pokeapi.co/api/v2/pokemon/72')
@@ -52,13 +46,23 @@ let fetch3 = fetch('https://pokeapi.co/api/v2/pokemon/66')
 Promise.all([fetch1, fetch2, fetch3])
     .then((data) => {
         console.log(data);
-        for (let i = 0; i < data.length; i++) {
+        /*data.forEach(element => {
+            addToDOM(element)
+        });*/
+        data.map(element  => {
+            addToDOM(element)
+        })
+        /*for (let i = 0; i < data.length; i++) {//TODO : no utilizar for
             addToDOM(data[i]);
-        }
+        }*/
     }).catch((error) => {
     console.log(`Error: ${error}`);
 })
 
+/**
+ *  es una funcion para crear dinamicamente  el html
+ * @param info :: parametro de pokemon
+ */
 function addToDOM(info) {
     let pokeCtn = document.getElementById('pokeCtn');
     let ctn = document.createElement('div');
