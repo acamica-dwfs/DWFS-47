@@ -21,16 +21,20 @@ const getGithubUser  =  (username) => {
     })
 }
 const  getUserFirst5Followers =  (username) => {
-    fetch(  URLGIT + username + '/followers' )  // https://api.github.com/users/yulian-zapata/followers
-        .then(response => response.json())
-        .then(json => {
-            console.log("seguidores")
-            for (let i = 0 ; i <=  5 ; i++) {
-                console.log(json[i].login)
-            }
-        }).catch(err => {
-        console.log("error de la api" + err);
-    })
+    try {
+        fetch(URLGIT + username + '/followers')  // https://api.github.com/users/yulian-zapata/followers
+            .then(response => response.json())
+            .then(json => {
+                console.log("seguidores")
+                for (let i = 0; i <= 5; i++) {
+                    console.log(json[i].login)
+                }
+            }).catch(err => {
+            console.log("error de la api" + err);
+        });
+    } catch (e){
+        console.log("error " +  e);
+    }
 }
 let USERNAME =  prompt("deme un usuario ");
 getGithubUser(USERNAME);
