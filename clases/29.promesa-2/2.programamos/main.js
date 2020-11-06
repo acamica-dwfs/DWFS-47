@@ -5,6 +5,41 @@
  Cuando todas las llamadas estén completas, muestra los resultados por pantalla modificando el DOM.
 
  */
+/*
+const URL =  'https://pokeapi.co/api/v2/pokemon-form/';
+
+let pokemon1 =  fetch(URL + "22/").then((response) => response.json());
+let pokemon2 =  fetch(URL + "11/").then((response) => response.json());
+let pokemon3 =  fetch(URL + "32/").then((response) => response.json());
+let divPrincipal =  document.getElementById("pokeCtn");
+
+Promise.all([pokemon1, pokemon2, pokemon3 ]).then((response) => {
+    for (let i = 0 ; i < response.length ; i++ ){
+        crearHtml(response[i]);
+    }
+}).catch((err) => {
+    console.log("error con la peticion"+  err);
+});
+
+let crearHtml =  (poke) => {
+    let div  =  document.createElement("div");
+
+    let h2  =  document.createElement("h2");
+    h2.textContent =  poke.pokemon.name + "#"+ poke.id;
+
+    let imagen = document.createElement("img");
+    imagen.src =  poke.sprites.front_default;
+
+    div.appendChild(h2);
+    div.appendChild(imagen);
+    divPrincipal.appendChild(div);
+}*/
+
+
+
+
+
+
 
 
 let fetch1 = fetch('https://pokeapi.co/api/v2/pokemon/46')

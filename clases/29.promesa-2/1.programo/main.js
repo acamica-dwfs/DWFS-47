@@ -16,22 +16,22 @@ let promise = new Promise((resolve, reject) => {
     setTimeout(() => resolve(2), 1000);
 }).then((result)=>{
     console.log('Cadena de promesas');
-    console.log(result);
+    console.log(result); // 2
     return result * 2;
 }).then((result)=>{
-    console.log(result);
+    console.log(result); // 4
     return result * 2;
 }).then((result)=>{
-    console.log(result);
+    console.log(result); // 8
     return result * 2;
 }).then((result)=>{
-    console.log(result);
+    console.log(result); //  16
     return result * 2;
 }).then((result)=>{
-    console.log(result);
+    console.log(result); // 32
     return result * 2;
 }).then((result)=>{
-    console.log(result);
+    console.log(result); // 64
     return result * 2;
 })
 
@@ -42,7 +42,10 @@ let promise2 = new Promise((resolve, reject) => {
     console.log('Promesas no encadenadas');
     console.log(result);
     return result * 2;
-})
+}).then((result) => {
+    console.log(result);
+});
+
 promise2.then((result)=>{
     console.log(result);
     return result * 2;
@@ -63,6 +66,31 @@ promise2.then((result)=>{
     console.log(result);
     return result * 2;
 })
+
+let promesa1 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(2), 20000);
+})
+let promesa2 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(4), 400);
+})
+let promesa3 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("a"), 50000);
+});
+
+Promise.all([promesa1, promesa2, promesa3]).then((result) => {
+    console.log("promesas ejecutadas")
+    console.log(result);
+}).catch((err) => {
+    console.log("error" + err);
+})
+
+Promise.race([promesa1, promesa2, promesa3]).then((result) => {
+    console.log("la primera  promesa en ejecutarse");
+    console.log(result);
+}).catch((err) => {
+    console.log("error" + err);
+});
+
 
 //Promise Race : cual se ejecuta primero
 let promiseRace1 = new Promise((resolve, reject) => {
@@ -98,11 +126,13 @@ Promise.all([promiseAll1, promiseAll2, promiseAll3]).then((response) => {
     console.log('Promise.all');
     console.log(response);
     let suma = 0;
+    let multi = 1 ;
     for(let i = 0; i < response.length; i++){
-        console.log(response[i]);
         suma += response[i];
+        multi  *=  response[i];
     }
-    console.log(suma);
+    console.log("la suma es :" +suma);
+    console.log("la multiplicacion  es :" +multi);
 }).catch((error)=>{
     console.log('Error en Promise.all 1: ' + error);
 })
