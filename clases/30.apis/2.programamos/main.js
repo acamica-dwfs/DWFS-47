@@ -9,30 +9,43 @@ The Open Movie Database es una plataforma que ofrece una API
 //omdb API - The Open Movie Database.
 //Api key se consigue en: http://www.omdbapi.com/
 //Registrarse en vivo o utilizar este API KEY: 7fb789f2
-let api_key = '7fb789f2';
+const api_key = '7fb789f2';
 
-//Enpoint de titulo de pelicula
-async function getMovieByTitle(title) {
-    let url = `https://www.omdbapi.com/?apikey=${api_key}&t=${title}`;
-    const resp = await fetch(url);
-    const data = await resp.json();
-    addToDOM(data);
-    //Puede en vez de crearse y ponerlo en el contenedor, cambiar el src a una imagen ya colocada en el HTML
-
-    console.log(data);
-};
-
-const addToDOM = (info) => {
-    let pokeCtn = document.getElementById('api');
-    let ctn = document.createElement('div');
-    let name = document.createElement('h2');
-    name.textContent = `actors : ${info.Actors}`;
-    let img = document.createElement('img');
-    img.setAttribute('src', info.Poster);
-    ctn.appendChild(img);
-    ctn.appendChild(name);
-    pokeCtn.appendChild(ctn);
+const search =  async (title) => {
+    try {
+        let url = `https://www.omdbapi.com/?apikey=${api_key}&t=${title}`;
+        let response = await fetch(url);
+        response = await response.json();
+        return response;
+    } catch (e){
+        console.log(e);
+    }
 }
 
-getMovieByTitle('titanic');
-//getMovieByTitle('Donnie Darko');
+const  movies = (movie) => {
+    let  result =  search(movie);
+    result.then((resp) => {
+        if(resp.Response !== "False") {
+            addDOM(resp);
+        }else {
+            alert("la pelicula no existe");
+        }
+    }).catch((e) => {
+        console.log("a ocurrido un error" + e);
+    })
+}
+
+const  addDOM = (data) => {
+    let divApi = document.getElementById("api");
+
+    let  img  = document.createElement("img");
+    img.src =  data.Poster;
+
+    let  p  = document.createElement("h2");
+    p.textContent =  " actors:"+data.Actors;
+
+    divApi.appendChild(img);
+    divApi.appendChild(p);
+}
+
+movies("titanic");
