@@ -9,21 +9,26 @@ loading.style.display = "none";
 //Tambien se puede buscar por país: Argentina, Uruguay, etc
 
 //Fetch con async await
-const newsSearch = async (city_name) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=${apiKey}`;
+const newsSearch = async (city) => { //london
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const resp = await fetch(url);
     const info = await resp.json();
     return info;
 }
 
 const search = () => {
-    let results = document.getElementById('results');
+    let results = document.getElementById('results');//london
     loading.style.display = "block";
-    let info = newsSearch(searchInput.value);
+    let info = newsSearch(searchInput.value);//londo
     info.then(response => {
         loading.style.display = "none";
-        console.log(response);
-        results.textContent = `Clima: ${response.weather[0].main}, Temperatura:  ${response.main.temp} °K`
+        /*if(response.cod !== "404" ){
+            results.textContent = `Clima: ${response.weather[0].main}, Temperatura:  ${response.main.temp} °K`
+        } else {
+            results.textContent = "ciudad no encontrada";
+        }*/
+        results.textContent = response.cod !== "404" ?  `Clima: ${response.weather[0].main}, Temperatura:  ${response.main.temp} °K` : "ciudad no encontrada";
+
     }).catch(error => {
         loading.style.display = "none";
         console.log(error);
