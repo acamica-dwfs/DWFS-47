@@ -19,39 +19,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const TRENDING_SEARCH_URL = "http://api.giphy.com/v1/trending/searches?api_key=VhZH68eUeluE17m4y9UW4Wq7QZI9rLRd";
 const SEARCH_TERM_URL = "http://api.giphy.com/v1/tags/related/{term}?api_key=VhZH68eUeluE17m4y9UW4Wq7QZI9rLRd";
 let trendingSearchList = document.getElementById('giphy-trending-search');
