@@ -10,10 +10,15 @@ loading.style.display = "none";
 
 //Fetch con async await
 const newsSearch = async (city) => { //london
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    const resp = await fetch(url);
-    const info = await resp.json();
-    return info;
+    try {
+        let url = `https://api.openweathermap.org/dat/2.5/weather?q=${city}&appid=${apiKey}`;
+        const resp = await fetch(url);
+        const info = await resp.json();
+        return info;
+    } catch (e){
+        console.log(e);
+        return e;
+    }
 }
 
 const search = () => {
