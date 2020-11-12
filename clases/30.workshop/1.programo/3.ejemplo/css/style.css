@@ -1,0 +1,11 @@
+.square{
+    margin-top: 50px;
+    position: relative;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.cross{
+    text-decoration: line-through;
+}

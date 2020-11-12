@@ -1,0 +1,19 @@
+body{
+    margin: 20px;
+}
+#pokeCtn{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#pokeCtn div{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border: 5px solid #000;
+    border-radius: 10px;
+    margin: 20px;
+}
+#pokeCtn div img{
+    width: 50%;
+}
