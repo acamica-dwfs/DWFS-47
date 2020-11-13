@@ -57,5 +57,5 @@ const  quotessimp = (limit) => {
 }
 
 trendingBtn.addEventListener('click', () => {
-    trending(4);
+    quotessimp(4);
 });
