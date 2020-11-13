@@ -26,3 +26,6 @@ console.log(moment().add(10, 'days').calendar());
 
 console.log(moment().subtract(10, 'days').format("YYYY MM DD"));
 console.log(moment().subtract(10, 'days').calendar());
+
+let  fecha = moment().add(1, 'years').format("YYYY MM DD");
+$('h1').text(fecha);
