@@ -1,9 +1,7 @@
 let searchBtn = document.getElementById('searchBtn');
-let trendingBtn = document.getElementById('trending');
 let searchInput = document.getElementById('search');
 let pokeCtn = document.getElementById('pokeCtn');
-
-
+let personajes = [];
 /**
  * tendencia  de gifs
  * @param limit ::  limite de elementos
@@ -38,24 +36,82 @@ const searchGif = (term) => {
         console.log("a ocurrido un error" + e);
     })
 }
-
 /**
  * agrega dinamicamente los elementos al html
  * @param info
  */
 const addToDOM = (info) => {
-    let ctn = document.createElement('div');
+    let divRow = document.createElement('div');
+    divRow.classList.add('row');
+
+    let divColum = document.createElement('div');
+    divColum.classList.add('col');
+
+    let divCarContainer = document.createElement('div');
+    divCarContainer.classList.add('card');
+    divCarContainer.style = 'width: 18rem;';
+
     let img = document.createElement('img');
-    img.setAttribute('src', info.images["480w_still"].url);
-    ctn.appendChild(img);
-    pokeCtn.appendChild(ctn);
+    img.classList.add('card-img-top');
+    img.setAttribute('src', info.image);
+
+    divCarContainer.appendChild(img);
+
+    let divCardBody = document.createElement('div');
+    divCardBody.classList.add('card-body');
+    let title = document.createElement('h5');
+    title.textContent = info.quote;
+    title.classList.add('card-title');
+
+    divCardBody.appendChild(title);
+
+    divCarContainer.appendChild(divCardBody);
+  
+    divColum.appendChild(divCarContainer);
+    divRow.appendChild(divColum);
+
+    pokeCtn.appendChild(divRow);
 }
 
 const  quotessimp = (limit) => {
+    let url = `${BASE_URL}/quotes?count=${limit}`;
+    let result = apiFetchGET(url);
+    result.then((resp)=>{
+        resp.map(element =>{
+            addToDOM(element);
+            personajes.push(element);
+        })
+  
+    }).catch((e) =>{
+        alert('Ocurrió un error' + e);
+    })
+}
+const searchPersonaje = (termino) =>{
+    let resultado =   personajes.filter(element =>element.character.includes(termino));
 
-
+    console.log(resultado);
+    if (resultado) {
+        pokeCtn.innerHTML = "";
+        resultado.map(element =>{
+            addToDOM(element);
+            personajes.push(element);
+        })
+    }else{
+        alert('No existe personaje');
+    }
 }
 
-trendingBtn.addEventListener('click', () => {
-    quotessimp(4);
+
+searchInput.addEventListener('keyup', () => {
+    if (event.which === 13 || event.keyCode == 13) {
+        searchPersonaje(searchInput.value);
+    }
 });
+
+searchBtn.addEventListener('click', () => {
+    searchPersonaje(searchInput.value);
+});
+
+
+quotessimp(4);
+
