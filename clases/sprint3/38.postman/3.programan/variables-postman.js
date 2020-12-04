@@ -1,3 +1,7 @@
+/**
+ *  permite almacenar  un token  com variable de postman
+ */
+
 if (responseCode.code === 200) {
     try {
         var authorization = JSON.parse(responseBody).access_token;
