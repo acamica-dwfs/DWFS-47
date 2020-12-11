@@ -32,6 +32,6 @@ const fileAppen = (operación, resultado)=>{
 }
 
 fileAppen('suma', `\n ${a} + ${b} = ${calcu.suma(a, b)} \n \n`);
-fileAppen('suma', `\n ${a} - ${b} = ${calcu.resta(a, b)} \n \n`);
-fileAppen('suma', `\n ${a} * ${b} = ${calcu.multi(a, b)} \n \n`);
-fileAppen('suma', `\n ${a} / ${b} = ${calcu.div(a, b)} \n \n`);
+fileAppen('resta', `\n ${a} - ${b} = ${calcu.resta(a, b)} \n \n`);
+fileAppen('multiplicación', `\n ${a} * ${b} = ${calcu.multi(a, b)} \n \n`);
+fileAppen('división', `\n ${a} / ${b} = ${calcu.div(a, b)} \n \n`);
