@@ -8,6 +8,8 @@ var Lang = ['Pera', 'Banana', 'Limones'];
 //muestro las frutas
 console.log(Lang);
 
+Lang.map( element  => console.log(element))
+
 //verificamos cuantos items tiene el array
 var cant = Lang.length
 console.log(cant);
