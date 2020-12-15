@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cool-images": "^1.0.3"
+    "express": "^4.17.1"
   }
 }

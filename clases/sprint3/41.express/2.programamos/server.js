@@ -1,8 +1,9 @@
 const express = require("express");
-const bodyParser = require('body-parser');
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+const telefonos = require("./telefonos.json");
 
 
 app.listen(3000, () => {
@@ -15,26 +16,7 @@ let respuesta = {
     mensaje: ''
 };
 
-const telefonos = [
-    {
-        marca:"Noxia",
-        modelo:"1100",
-        pantalla:"TFT de 6.5",
-        sistema_operativo:"Android 9.0 Pie."
-    },
-    {
-        marca:"Samsung",
-        modelo:"Galaxy A20",
-        pantalla:"TFT de 6.5",
-        sistema_operativo:"Android 9.0 Pie."
-    },
-    {
-        marca:"Alcatel",
-        modelo:"One",
-        pantalla:"TFT de 5.5",
-        sistema_operativo:"Android 5.0 Pie."
-    }
-]
+
 
 
 app.get("/telefonos", (req, res) => {
@@ -50,7 +32,7 @@ app.get("/telefonos", (req, res) => {
 
 
 //Creamos el metodo Post para crear un nuevo telefono
-app.post('/telefonos', function (req, res) {
+app.post('/telefonos',  (req, res)  =>{
     console.log(req.body.nombre);
     if (!req.body.marca || !req.body.modelo) {
         respuesta = {
@@ -78,7 +60,7 @@ app.post('/telefonos', function (req, res) {
 });
 
 
-app.use(function (req, res, next) {
+app.use((req, res, next)  =>{
     respuesta = {
         error: true,
         codigo: 404,

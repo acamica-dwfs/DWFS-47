@@ -1,15 +1,18 @@
 const express = require("express");
-const bodyParser = require('body-parser');
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// parse application/json, basically parse incoming Request Object as a JSON Object
+app.use(express.json());
+// parse application/x-www-form-urlencoded, basically can only parse incoming Request Object if strings or arrays
+app.use(express.urlencoded({ extended: false }));
+// combines the 2 above, then you can parse incoming Request Object if object, with nested objects, or generally any type.
+//app.use(express.urlencoded({ extended: true }));
 
 //Inicializamos el Server en el puerto 3000
 app.listen(3000, () => {
     console.log("El servidor está inicializado en el puerto 3000");
 });
 
-//Inicializamos un Objeto Pais 
+//Inicializamos un Objeto Pais
 let pais = {
     nombre: '',
     habitantes: ''
@@ -23,7 +26,7 @@ let respuesta = {
 };
 
 //Creamos un metodo Get raiz como punto de inicio
-app.get('/', function (req, res) {
+app.get('/',  (req, res)  => {
     //Creamos la respuesta
     respuesta = {
         error: true,
@@ -34,8 +37,8 @@ app.get('/', function (req, res) {
 });
 
 //Creamos otro metodo Get para ver el pais
-app.get('/pais', function (req, res) {
-     //Inicializamos la respuesta
+app.get('/pais',  (req, res) => {
+    //Inicializamos la respuesta
     respuesta = {
         error: false,
         codigo: 200,
@@ -43,7 +46,7 @@ app.get('/pais', function (req, res) {
     };
 
     if (pais.nombre === '' || pais.habitantes === '') {
-         //Si el pais NO exite modificamos la respuesta
+        //Si el pais NO exite modificamos la respuesta
         respuesta = {
             error: true,
             codigo: 501,
@@ -63,7 +66,7 @@ app.get('/pais', function (req, res) {
 });
 
 //Creamos el metodo Post para crear el pais
-app.post('/pais', function (req, res) {
+app.post('/pais',  (req, res) => {
     console.log(req.body.nombre);
     if (!req.body.nombre || !req.body.habitantes) {
         respuesta = {
@@ -79,7 +82,6 @@ app.post('/pais', function (req, res) {
                 mensaje: 'El pais ya fue creado'
             };
         } else {
-            
             //Si el pais NO existe, lo creamos y generamos la respuesta
             pais = {
                 nombre: req.body.nombre,
@@ -98,7 +100,7 @@ app.post('/pais', function (req, res) {
 });
 
 //Creamos el metodo Put para Actualizar el pais
-app.put('/pais', function (req, res) {
+app.put('/pais',  (req, res) =>{
     if (!req.body.nombre || !req.body.habitantes) {
         respuesta = {
             error: true,
@@ -116,7 +118,7 @@ app.put('/pais', function (req, res) {
             };
         } else {
 
-               //Si el pais SI existe, lo actualizamos y generamos la respuesta
+            //Si el pais SI existe, lo actualizamos y generamos la respuesta
             pais = {
                 nombre: req.body.nombre,
                 habitantes: req.body.habitantes
@@ -134,10 +136,8 @@ app.put('/pais', function (req, res) {
 });
 
 //Creamos el metodo Delete para eliminar el pais
-
-app.delete('/pais', function (req, res) {
-
-    //si no existe el Pais 
+app.delete('/pais',  (req, res) =>{
+    //si no existe el Pais
     if (pais.nombre === '' || pais.habitantes === '') {
         respuesta = {
             error: true,
@@ -167,6 +167,6 @@ app.use(function (req, res, next) {
         codigo: 404,
         mensaje: 'URL no encontrada'
     };
-      //Imrpimimos respuesta
+    //Imrpimimos respuesta
     res.status(404).send(respuesta);
 });
