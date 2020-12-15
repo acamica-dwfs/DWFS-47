@@ -49,7 +49,7 @@ app.get("/telefonos", (req, res) => {
 });
 
 
-//Creamos el metodo Post para crear el pais
+//Creamos el metodo Post para crear un nuevo telefono
 app.post('/telefonos', function (req, res) {
     console.log(req.body.nombre);
     if (!req.body.marca || !req.body.modelo) {
@@ -59,7 +59,6 @@ app.post('/telefonos', function (req, res) {
             mensaje: 'El campo nombre y habitantes son requeridos'
         };
     } else {
-
             celular = {
                 marca: req.body.marca,
                 modelo: req.body.modelo,
@@ -73,7 +72,6 @@ app.post('/telefonos', function (req, res) {
                 mensaje: 'celular creado',
                 respuesta: celular
             };
-        
     }
     //Imrpimimos respuesta
     res.send(respuesta);
