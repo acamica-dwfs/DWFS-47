@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 // parse application/json, basically parse incoming Request Object as a JSON Object
-app.use(express.json());
+app.use(express.json()); //middleware
 // parse application/x-www-form-urlencoded, basically can only parse incoming Request Object if strings or arrays
 app.use(express.urlencoded({ extended: false }));
 // combines the 2 above, then you can parse incoming Request Object if object, with nested objects, or generally any type.
@@ -67,7 +67,7 @@ app.get('/pais',  (req, res) => {
 
 //Creamos el metodo Post para crear el pais
 app.post('/pais',  (req, res) => {
-    console.log(req.body.nombre);
+    console.log(req.body);
     if (!req.body.nombre || !req.body.habitantes) {
         respuesta = {
             error: true,

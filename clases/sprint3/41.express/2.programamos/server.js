@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const telefonos = require("./telefonos.json");
+const telefonos = require("./telefonos.json"); // importando los datos en telefono.json
 
 
 app.listen(3000, () => {
@@ -41,24 +41,31 @@ app.post('/telefonos',  (req, res)  =>{
             mensaje: 'El campo nombre y habitantes son requeridos'
         };
     } else {
+           let  body  =  req.body;
             celular = {
-                marca: req.body.marca,
-                modelo: req.body.modelo,
-                pantalla: req.body.pantalla,
-                sistema_operativo: req.body.sistema_operativo,
+                marca: body.marca,
+                modelo: body.modelo,
+                pantalla: body.pantalla,
+                sistema_operativo: body.sistema_operativo,
             };
             telefonos.push(celular);
             respuesta = {
                 error: false,
-                codigo: 200,
+                codigo: 201,
                 mensaje: 'celular creado',
                 respuesta: celular
             };
     }
     //Imrpimimos respuesta
-    res.send(respuesta);
+    res.status(201).send(respuesta);
 });
 
+app.put("/telefonos/:id", (req, res) => {
+    let id = parseInt(req.params.id);
+    let  buscador  =  telefonos.filter( elementos =>  elementos.id === id);
+    buscador[0].modelo  =  buscador[0].modelo +" acamica";
+    res.status(200).send( {respuesta : "ok", id : buscador});
+});
 
 app.use((req, res, next)  =>{
     respuesta = {
