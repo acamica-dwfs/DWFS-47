@@ -16,9 +16,6 @@ let respuesta = {
     mensaje: ''
 };
 
-
-
-
 app.get("/telefonos", (req, res) => {
 
     respuesta = {

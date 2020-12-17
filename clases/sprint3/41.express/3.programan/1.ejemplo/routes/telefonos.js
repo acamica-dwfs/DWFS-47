@@ -18,5 +18,12 @@ router.post('/',  (req, res)  =>{
   }
 });
 
+router.put("/:id", (req, res) => {
+  let id = parseInt(req.params.id);
+  let  buscador  =  telefonos.filter( elementos =>  elementos.id === id);
+  buscador[0].modelo  =  buscador[0].modelo +" acamica";
+  res.status(200).send( {respuesta : "ok", id : buscador});
+})
+
 
 module.exports = router;
