@@ -1,11 +1,11 @@
 const express = require("express");
-const server = express();
+const app = express();
 const port = 3000;
 
 const autores = require("./autores.json").autores;
 
 // Middleware para la gestión del body
-server.use(express.json());
+app.use(express.json());
 
 // estado de la api
 app.get("/api/v1/autores/healt", (req, res) => {
