@@ -1,6 +1,6 @@
 const express = require("express");
 const server = express();
-const datos = require("../43-express/alumnos.json");
+const datos = require("./alumnos.json").alumnos;
 const port = 3000;
 server.use(express.json());
 
@@ -16,8 +16,8 @@ const middlewareEspecifico = (req, res, next) => {
         `Middleware solo para recurso: ${req.path}`
     );
     // Destructuring
-    console.log(req.params);
-    const { user, lastName, name } = req.params;
+    console.log(req.query);
+    const { user, lastName, name } = req.query;
     const userTrimmed = user.trim();
     if (userTrimmed !== "acamica") {
         console.log("Usuario inválido");
@@ -34,7 +34,7 @@ server.get("/", (req, res) => {
 });
 
 //Muestra todos los estudiantes
-server.get("/acamica/alumnos/:user", middlewareEspecifico, (req, res) => {
+server.get("/acamica/alumnos/", middlewareEspecifico, (req, res) => {
     res.json(datos);
 });
 
