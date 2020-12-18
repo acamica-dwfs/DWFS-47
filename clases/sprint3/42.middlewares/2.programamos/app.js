@@ -1,17 +1,15 @@
 const express = require("express");
+const compression = require('compression');
 const app = express();
 const port = 3000;
 
 const indexRouter = require('./routes/index');
-const phoneRouter = require('./routes/contactos');
+const contactsRouter = require('./routes/contactos');
 
 app.use(express.json());
+app.use(compression());
 
-
-
-
-app.use(express.json());
-
+//  log  para ver los datos que llegan al servidor o app
 const middleLog = (err, req, res, next) => {
     console.log(
         req.method +
@@ -29,10 +27,10 @@ const middleLog = (err, req, res, next) => {
 
     next();
 };
+app.use(middleLog);
 
-
-app.use('/', indexRouter, middleLog);
-app.use('/personas', phoneRouter, middleLog);
+app.use('/', indexRouter);
+app.use('/personas', contactsRouter);
 
 
 app.listen(port, () => {

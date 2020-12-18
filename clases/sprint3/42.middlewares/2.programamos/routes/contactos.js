@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const contactos = require("../contactos.json").contactos; // importando los datos en telefono.json
+const contactos = require("../contactos.json").contactos; // importando los datos en contactos.json
 
 
 const middleValidarPost = (req, res, next) => {
@@ -8,6 +8,8 @@ const middleValidarPost = (req, res, next) => {
 };
 
 const middleValidarGet = (req, res, next) => {
+    console.log(" middleware  de validar get");
+    next();
 }
 
 /* GET users listing. */
@@ -16,7 +18,7 @@ router.get('/', middleValidarGet , (req, res, next) =>  {
 });
 
 // crea un nuevo
-router.post('/', middleValidarPost ,  (req, res)  =>{
+router.post('/' ,  (req, res)  =>{
 
 });
 
