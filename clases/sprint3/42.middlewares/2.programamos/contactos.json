@@ -4,25 +4,25 @@
       "id" : 1,
       "nombre": "jhonathan",
       "apellido": "tabares",
-      "email": "jdhdfhf@hfhf.com",
+      "email": "jdhdfhf@hfhf.com"
     },
     {
       "id" : 2,
       "nombre": "mar",
       "apellido": "miranda",
-      "email": "jdhdfhf@hfhf.com",
+      "email": "jdhdfhf@hfhf.com"
     },
     {
       "id" : 3,
       "nombre": "esteban",
       "apellido": "rojas",
-      "email": "jdhdfhf@hfhf.com",
+      "email": "jdhdfhf@hfhf.com"
     },
     {
       "id" : 4,
       "nombre": "wil",
       "apellido": "duque",
-      "email": "jdhdfhf@hfhf.com",
+      "email": "jdhdfhf@hfhf.com"
     }
   ]
 }
