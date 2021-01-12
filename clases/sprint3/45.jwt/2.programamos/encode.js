@@ -1,8 +1,5 @@
-//npm install express
 const express = require('express');
-//npm install jsonwebtoken
 const jwt = require('jsonwebtoken');
-
 const app = express();
 
 app.listen(1000, function () {
