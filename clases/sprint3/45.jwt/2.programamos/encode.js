@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 
 app.listen(1000, function () {
-    console.log('aplicacion en el puerto 3000!');
+    console.log('aplicacion en el puerto 1000!');
 });
 
 const firma = "Hola Mundo";

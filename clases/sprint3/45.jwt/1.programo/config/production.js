@@ -1,5 +1,5 @@
 const config = {
-    Port: 5500,
+    Port: 5600,
     ApiBaseUrl: "https://produccion.puntos.com",
     JwtSecretKey:
         "856ED746F97360B36E4BA820EB5A848206D5B40EA5D2D5BE0A5392E8BBD2A16C",

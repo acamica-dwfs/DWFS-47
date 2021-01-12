@@ -2,7 +2,7 @@ const config = {
     Port: 5500,
     ApiBaseUrl: "https://ambienteprueba.puntos.com",
     JwtSecretKey:
-        "856ED746F97360B36E4BA820EB5A848206D5B40EA5D2D5BE0A5392E8BBD2A16C",
+        "C468BD253A764AA29AB8D4EB06FFD4FFE2AAA5F98016032F9A237FEC6A757112",
     JwtExpiresToken: 20, // seconds
     LoginInfo: {
         User: "acamica",

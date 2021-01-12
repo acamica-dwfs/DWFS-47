@@ -1,10 +1,10 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const ENV = process.env.NODE_ENV || "development";
-const config = require('config/ '+  ENV).config;
+const config = require('./config/'+ ENV).config;
 const app = express();
 
-app.use(express.bodyParser());
+app.use(express.json());
 
 const validateJwtMiddleware = (req, res, next) => {
     const jwtToken = req.headers["authorization"];
