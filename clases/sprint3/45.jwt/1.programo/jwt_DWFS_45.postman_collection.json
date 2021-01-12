@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "087bc7bc-cade-4d8b-a678-5e42f72464c5",
+		"name": "jwt_DWFS_45",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"usuario\":\"usuario\",\"clave\":\"password\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Se debe pasar por parametro json, usurio y clave \r\nel usuario valido es el usaurio y la clave es password\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "acces noticias",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjoidXN1YXJpbyIsImlhdCI6MTU5MzQ0MzgyOH0.tZ0wa_K20mzMWHqndPBCHpgIiTXybhN_CC41Yl5iNs4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/noticias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"noticias"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
