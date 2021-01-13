@@ -3,7 +3,7 @@ const config = {
     ApiBaseUrl: "https://ambienteprueba.puntos.com",
     JwtSecretKey:
         "C468BD253A764AA29AB8D4EB06FFD4FFE2AAA5F98016032F9A237FEC6A757112",
-    JwtExpiresToken: 20, // seconds
+    JwtExpiresToken: 60, // seconds
     LoginInfo: {
         User: "acamica",
         Password: "acamica123",

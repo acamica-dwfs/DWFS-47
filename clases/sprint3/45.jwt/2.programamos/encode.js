@@ -10,7 +10,10 @@ const firma = "Hola Mundo";
 
 const token = jwt.sign({
     id:1,
-    nombre: "Dani"
-}, firma);
+    nombre: "Dani",
+    tipo: "admin"
+}, firma ,{
+    expiresIn: 20
+});
 
 console.log(token)
