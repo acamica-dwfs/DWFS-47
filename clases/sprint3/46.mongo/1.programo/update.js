@@ -15,12 +15,13 @@ const pelicula = mongoose.model('peliculas', {
     ano: Date
 });
 
-//Actualizamos los datos 
-pelicula.findOne({_id:'5efa54e6beaaeb0474d496ef'}).then(function(resultado){
+//Actualizamos los datos
+pelicula.findOne({_id:'6000e368c14aba282392e8ce'}).then((resultado) =>{
     resultado.titulo = 'Pesadilla en la calle del infierno';
     resultado.director = 'Wes Craven';
     resultado.genero = 'Terror';
     resultado.ano = '1984';
     resultado.save();
     console.log(resultado);
+    console.log( "actualizado correctamente ");
 });

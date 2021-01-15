@@ -20,4 +20,8 @@ let nuevaPelicula = {
     genero:"Terror",ano:"1979"
 }
 const rsPelicula = new pelicula(nuevaPelicula);
-rsPelicula.save();
+rsPelicula.save().then(() => {
+    console.log("   se ha insertado correctamente")
+}).catch(e => {
+    console.log( "ha ocurrido un error")
+});
