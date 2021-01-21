@@ -109,6 +109,29 @@ CREATE UNIQUE INDEX indice_estudiantes_email
 ON estudiantes (email) USING HASH;
 
 
+INSERT INTO estudiante_curso (id_estudiante , id_curso )
+values (7, 2)
+
+    use  acamica;
+
+--  fk : llaves foraneas   para agregar restricciones de insercion
+
+ALTER TABLE estudiante_curso
+    ADD FOREIGN KEY (id_estudiante) REFERENCES estudiantes(id_estudiante);
+
+
+ALTER TABLE estudiante_curso
+    ADD FOREIGN KEY (id_curso) REFERENCES cursos(id_curso);
+
+--   uso de join para  cruce   de dos tablas
+
+select id_estudiante_curso  , a.nombre , a.email , c.nombre
+from estudiante_curso
+         left join estudiantes as a using(id_estudiante)
+         left join  cursos as c  using(id_curso)
+
+
+
 
 
 
