@@ -4,9 +4,11 @@ const sequelize = require('./conexion.js');
 
 async function findAllRows() {
     sequelize.query('UPDATE restaurant SET ADRESSE = "Bares de buenos aires" WHERE ID_RESTO = ?',
-        { replacements: [12]}
+        { replacements: [1]}
     ).then(function (restaurant) {
         console.log(restaurant)
+    }).catch( e => {
+        console.log("error  en la insercion " + e)
     })
 }
 

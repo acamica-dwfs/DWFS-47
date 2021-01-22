@@ -4,9 +4,11 @@ const sequelize = require('./conexion.js');
 
 
 async function findAllRows() {
-    sequelize.query("SELECT * FROM restaurant", { type: sequelize.QueryTypes.SELECT })
+    sequelize.query("SELECT * FROM restaurant limit 3", { type: sequelize.QueryTypes.SELECT })
         .then(function (productos) {
             console.log(productos);
+        }).catch( e => {
+            console.log("error  en la insercion " + e)
         })
 }
 
