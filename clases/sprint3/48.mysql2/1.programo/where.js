@@ -15,13 +15,13 @@ async function findAllRows() {
     })
 }
 
-app.get( "/productos",  async  (req, res) => {
-      await  sequelize.query('SELECT * FROM restaurant WHERE NOM_RESTO = ?',
+app.get( "/productos",    (req, res) => {
+      sequelize.query('SELECT * FROM restaurant WHERE NOM_RESTO = ?',
           { replacements: ['test 1'], type: sequelize.QueryTypes.SELECT }
       ).then(function (projects) {
           console.log(" datos encontrados:")
           console.log(projects)
-           res.status(200).json({ result})
+           res.status(200).json({ body: result})
       }).catch( e => {
           console.log("error  en la insercion " + e)
            res.status(400).json({  status: false})

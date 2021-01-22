@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const path = 'mysql://root@localhost:3306/event_eventos';
+const path = 'mysql://root:ohmyfi@localhost:3306/acamica';
 const sequelize = new Sequelize(path, { operatorsAliases: false });
 
 sequelize.authenticate().then(() => {

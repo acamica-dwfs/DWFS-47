@@ -5,7 +5,7 @@ const sequelize = require('./conexion.js');
 
 async function findAllRows() {
 
-    sequelize.query("SELECT * FROM inscriptos", { type: sequelize.QueryTypes.SELECT })
+    sequelize.query("SELECT * FROM  estudiantes", { type: sequelize.QueryTypes.SELECT })
         .then(function (productos) {
             console.log(productos);
         })
