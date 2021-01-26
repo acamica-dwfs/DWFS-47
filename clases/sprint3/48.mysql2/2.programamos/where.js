@@ -5,14 +5,25 @@ const sequelize = require('./conexion.js');
 
 async function findAllRows() {
 
-    sequelize.query('SELECT * FROM inscriptos WHERE email like ?',
-        { replacements: ['%@gmail.com'], type: sequelize.QueryTypes.SELECT }
-    ).then(function (projects) {
+    sequelize.query('SELECT * FROM estudiantes WHERE edad > 30 and activo = false',
+        ).then(function (projects) {
         console.log(projects)
     })
 }
 
-findAllRows();
+
+async function findEmail() {
+
+    sequelize.query('SELECT * FROM estudiantes where email like ?',
+        { replacements: ['%pilar%'], type: sequelize.QueryTypes.SELECT }
+        ).then(function (projects) {
+        console.log(projects)
+    })
+}
+
+findEmail()
+
+//findAllRows();
 
 
 app.listen(3000, function () {
