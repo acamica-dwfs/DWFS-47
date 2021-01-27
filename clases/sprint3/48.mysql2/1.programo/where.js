@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
-const sequelize = require('./conexion.js');
+const sequelize = require('./conexion');
 
 
 async function findAllRows() {
       sequelize.query('SELECT * FROM restaurant WHERE NOM_RESTO = ?',
-        { replacements: ['test 1'], type: sequelize.QueryTypes.SELECT }
+        { replacements: ['Cocotte'], type: sequelize.QueryTypes.SELECT }
     ).then(function (projects) {
         console.log(" datos encontrados:")
         console.log(projects)
@@ -28,8 +28,7 @@ app.get( "/productos",    (req, res) => {
       })
 })
 
-
-
+findAllRows()
 
 app.listen(3000, function () {
     console.log('Sistema armado en el puerto 3000!');
