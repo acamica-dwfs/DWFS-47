@@ -1,29 +1,31 @@
 var express = require('express');
 var app = express();
-const sequelize = require('./conexion.js');
 
 
-async function findAllRows() {
 
-    sequelize.query('SELECT * FROM estudiantes WHERE edad > 30 and activo = false',
-        ).then(function (projects) {
-        console.log(projects)
-    })
+async function findAllRows(req, res) {
+    const query = 'select c.nombre curso , es.nombre estudiante\n' +
+        'from  estudiante_curso ac\n' +
+        'left join estudiantes  es  using(id_estudiante)\n' +
+        'left join cursos c using(id_curso)\n' +
+        'order by  es.nombre DESC \n' +
+        'limit 2'
+
+    try {
+        const sequelize = require('./conexion.js');
+        const result = await  sequelize.query(query,  {type: sequelize.QueryTypes.SELECT})
+        console.log(result)
+        res.status(200).json({result})
+    } catch (e) {
+        res.status(500)
+        console.log(e)
+    }
 }
 
 
-async function findEmail() {
 
-    sequelize.query('SELECT * FROM estudiantes where email like ?',
-        { replacements: ['%pilar%'], type: sequelize.QueryTypes.SELECT }
-        ).then(function (projects) {
-        console.log(projects)
-    })
-}
 
-findEmail()
-
-//findAllRows();
+app.get('/estudiantes',  findAllRows)
 
 
 app.listen(3000, function () {
