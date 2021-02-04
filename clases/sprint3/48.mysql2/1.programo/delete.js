@@ -5,8 +5,8 @@ const sequelize = require('./conexion.js');
 async function findAllRows() {
     sequelize.query('DELETE FROM restaurant WHERE ID_RESTO = ?',
         { replacements: [2] }
-    ).then(function (restaurant) {
-        console.log(restaurant)
+    ).then(result =>{
+        console.log(result)
     }).catch( e => {
         console.log("error  en la insercion " + e)
     })
